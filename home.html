@@ -1,5 +1,5 @@
 <header>
-    <div ng-include='"_includes/mainNav.html"'></div>
+    <ng-include src="'_includes/mainNav.html'"></ng-include>
 </header>
 
 <section class="filter">
@@ -22,8 +22,8 @@
     <div class="container-fluid">
         <div class="row" monitor-style="height" update-variable="height">
             <!-- barely explained https://plnkr.co/edit/?p=preview -->
-            <div 
-                class="col-xs-6 col-sm-4 col-md-3" 
+            <div
+                class="col-xs-6 col-sm-4 col-md-3"
                 ng-repeat="each in food | filter: currentItem"
                 ng-class="{ 'even': $even, 'odd': $odd }" >
 
@@ -47,7 +47,7 @@
                                 <p class="wed"><span class="fieldName">Wed:</span> {{ each.hours.wed}}</p>
                                 <p class="thu"><span class="fieldName">Thu:</span> {{ each.hours.thu}}</p>
                                 <p class="fri"><span class="fieldName">Fri:</span> {{ each.hours.fri}}</p>
-                                <p class="sat"><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p> 
+                                <p class="sat"><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p>
                             </div>
                         </div>
                     </li>

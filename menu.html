@@ -1,6 +1,6 @@
 <div ng-repeat="each in food | filter: currentItem">
     <header>
-        <div ng-include='"_includes/mainNav.html"'></div>
+        <ng-include src="'_includes/mainNav.html'"></ng-include>
         <div class="container-fluid banner" style="background-image: url('_assets/{{each.imageLG}}');">
             <div class="row">
                 <div class="col-5 placard">
@@ -23,7 +23,7 @@
                                             <p class="wed"><span class="fieldName">Wed:</span> {{ each.hours.wed}}</p>
                                             <p class="thu"><span class="fieldName">Thu:</span> {{ each.hours.thu}}</p>
                                             <p class="fri"><span class="fieldName">Fri:</span> {{ each.hours.fri}}</p>
-                                            <p class="sat"><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p> 
+                                            <p class="sat"><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p>
                                         </div>
                                     </div>
                                 </li>
@@ -70,7 +70,7 @@
                         </li>
                         <li class="address">
                             <p>
-                                <span class="fieldName">Address:</span> 
+                                <span class="fieldName">Address:</span>
                                 <span class="overflow">{{ each.address.address1}}{{each.address.address2 }} </br>{{ each.address.city}}, NY &ndash; {{ each.address.zipcode }}</span>
                             </p>
                         </li>
@@ -84,7 +84,7 @@
                                     <p class="wed"><span class="fieldName">Wed:</span> {{ each.hours.wed}}</p>
                                     <p class="thu"><span class="fieldName">Thu:</span> {{ each.hours.thu}}</p>
                                     <p class="fri"><span class="fieldName">Fri:</span> {{ each.hours.fri}}</p>
-                                    <p class="sat"><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p> 
+                                    <p class="sat"><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p>
                                 </div>
                             </div>
                         </li>
@@ -199,7 +199,7 @@
                 | <a href="https://postmates.com/nyc/burger-club-astoria">burger club</a></li>
                 | <a href="https://www.ubereats.com/stores/992c6347-7569-44d8-91d9-272bc10781c6/">K of Falafel</a></li>
 
-                </ul>            
+                </ul>
             </div>
             <div class="col-xs-4">
                 <h3>Route to Class</h3>
@@ -241,18 +241,18 @@
             <label>Search: <input ng-model="currentItem"></label>
 
             <!-- barely explained https://plnkr.co/edit/?p=preview -->
-            <ul class="mainList" ng-repeat="each in food | filter: currentItem"> 
+            <ul class="mainList" ng-repeat="each in food | filter: currentItem">
                 <li>
                     <h3>{{ each.name }}</h3>
                 </li>
                 <li class="details">
                     <p><span class="fieldName">Phone:</span> <span class="phone">{{ each.phone }}</span></p>
-                    <p><span class="fieldName">Minimum:</span> <span class="minimum">{{ each.minimum }}</span></p> 
-                    <p><span class="fieldName">Devilery Fee:</span> <span class="fee">{{ each.fee }}</span></p> 
+                    <p><span class="fieldName">Minimum:</span> <span class="minimum">{{ each.minimum }}</span></p>
+                    <p><span class="fieldName">Devilery Fee:</span> <span class="fee">{{ each.fee }}</span></p>
                 </li>
                 <li class="address">
                     <p>
-                        <span class="fieldName">Address:</span> 
+                        <span class="fieldName">Address:</span>
                         <span class="overflow">{{ each.address.address1}}{{each.address.address2 }} </br>{{ each.address.city}}, NY &ndash; {{ each.address.zipcode }}</span>
                     </p>
                 </li>
@@ -265,10 +265,10 @@
                             <p><span class="fieldName">Wed:</span> {{ each.hours.wed}}</p>
                             <p><span class="fieldName">Thu:</span> {{ each.hours.thu}}</p>
                             <p><span class="fieldName">Fri:</span> {{ each.hours.fri}}</p>
-                            <p><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p> 
+                            <p><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p>
                             <p><span class="fieldName">Sun:</span> {{ each.hours.sun}}</p>
                         </div>
-                    </p> 
+                    </p>
                 </li>
             </ul>
         </div>
@@ -398,13 +398,13 @@
 <hr>
 
 <input type="text" ng-model="message" />
-            
+
 <select ng-model="message">
   <option value="option 1">Option 1</option>
   <option value="option 2">Option 2</option>
-</select> 
+</select>
 
-<textarea ng-model="message" rows="4" cols="50"></textarea> 
+<textarea ng-model="message" rows="4" cols="50"></textarea>
 
 
 <h2>INDEX</h2>
