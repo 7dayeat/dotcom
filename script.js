@@ -12,12 +12,12 @@
     })
 
 
-    // First level 
+    // First level
     // .controller('MainCtrl', ['$scope', '$route', '$location', function($scope, $route, $location) {
 
     .controller('firstCtrl', ['$scope', '$routeParams', '$location', function($scope, $routeParams, $location) {
 
-        // items      
+        // items
         $scope.items = {
             item1: {
                 name: 'Brazil Nuts',
@@ -29,20 +29,20 @@
                 description: 'The best nut',
                 address: '234 Walnut Street'
             }
-        }; 
+        };
 
         // 7DayEat.com CONTENT
         $scope.siteInfo = {
             name: '7dayEat.com'
-        }; 
+        };
 
         // $scope.names = ["Emil", "Tobias", "Linus"];
 
         // KEYWORDS
-        // lunch special hamburgers pizza salads sushi american italian pasta mexican 
-        // mediterranean turkish greek asian chineese thai indian japanese soups subs  
-        // seafood grill diner breakfast deli bagels coffee tea smoothies juices dessert 
-        // healthy vegetarian vegan gluten free 
+        // lunch special hamburgers pizza salads sushi american italian pasta mexican
+        // mediterranean turkish greek asian chineese thai indian japanese soups subs
+        // seafood grill diner breakfast deli bagels coffee tea smoothies juices dessert
+        // healthy vegetarian vegan gluten free
         $scope.keywords = 'lunch special,hamburgers,pizza,salads,sushi,american,italian,pasta,mexican,mediterranean,turkish,greek,asian,chineese,thai,indian,japanese,soups,subs,seafood,grill,diner,breakfast,deli,bagels,coffee,tea,smoothies,juices,dessert,healthy,vegetarian,vegan,gluten-free';
 
         $scope.food = [{
@@ -56,7 +56,7 @@
             address: {
                 address1: '30-30 30 Street',
                 address2: '',
-                city: 'Astoria', 
+                city: 'Astoria',
                 zipcode: '11106'},
             hours: {
                 mon: '11am to 12pm',
@@ -80,7 +80,7 @@
             address: {
                 address1: '1234 55 Street',
                 address2:', Queens Mall',
-                city: 'Flushing', 
+                city: 'Flushing',
                 zipcode: '13375'},
             hours: {
                 mon: '11am to 12pm',
@@ -93,7 +93,7 @@
             keywords: 'all dessert soups coffee tea salads pasta'
         },
         {
-            name:'Cabrera Salad', 
+            name:'Cabrera Salad',
             imageSM: 'Salad_Cabrera.jpg',
             imageLG: 'Salad_Cabrera.jpg',
             phone:'800-CABRERA',
@@ -103,7 +103,7 @@
             address: {
                 address1: '110-30 48 Street',
                 address2: '',
-                city: 'Woodside', 
+                city: 'Woodside',
                 zipcode: '11309'},
             hours: {
                 mon: '11am to 12pm',
@@ -116,7 +116,7 @@
             keywords: 'all salad'
         },
         {
-            name:'Mike Burger', 
+            name:'Mike Burger',
             imageSM: 'Mike_Burger.jpg',
             imageLG: 'Mike_Burger.jpg',
             phone:'718-555-4321',
@@ -126,7 +126,7 @@
             address: {
                 address1: '110-30 48 Street',
                 address2: '',
-                city: 'Woodside', 
+                city: 'Woodside',
                 zipcode: '11309'},
             hours: {
                 mon: '11am to 12pm',
@@ -139,7 +139,7 @@
             keywords: 'all hamburgers lunch special smoothies juices dessert soups'
         },
         {
-            name:'Adam Soups', 
+            name:'Adam Soups',
             imageSM: 'Adam_Soups.jpg',
             imageLG: 'Adam_Soups.jpg',
             phone:'718-555-5678',
@@ -149,7 +149,7 @@
             address: {
                 address1: '110-30 48 Street',
                 address2: '',
-                city: 'Woodside', 
+                city: 'Woodside',
                 zipcode: '11309'},
             hours: {
                 mon: '11am to 12pm',
@@ -162,7 +162,7 @@
             keywords: 'all soups bagels coffee tea vegetarian vegan'
         },
         {
-            name:'Julie Deli', 
+            name:'Julie Deli',
             imageSM: 'Julie_Deli.jpg',
             imageLG: 'Julie_Deli.jpg',
             phone:'718-555-8765',
@@ -172,7 +172,7 @@
             address: {
                 address1: '110-30 48 Street',
                 address2: '1C',
-                city: 'Flushing', 
+                city: 'Flushing',
                 zipcode: '11300'},
             hours: {
                 mon: '11am to 12pm',
@@ -185,7 +185,7 @@
             keywords: 'all deli soups subs pizza juices dessert coffee tea bagels'
         },
         {
-            name:'Juliette Breakfast and Dinner', 
+            name:'Juliette Breakfast and Dinner',
             imageSM: 'Juliette_Breakfast.jpg',
             imageLG: 'Juliette_Breakfast.jpg',
             phone:'718-555-5678',
@@ -195,7 +195,7 @@
             address: {
                 address1: '15-30 48 Street',
                 address2: '5th Fl',
-                city: 'Jamaica', 
+                city: 'Jamaica',
                 zipcode: '13076'
             },
             hours: {
@@ -209,14 +209,14 @@
             keywords: 'all lunch special hamburgers salads american italian pasta mexican mediterranean turkish greek asian chineese thai soups subs seafood grill diner breakfast deli bagels coffee tea smoothies juices dessert healthy vegetarian vegan gluten-free'
         }];
 
-        // TODAY 
+        // TODAY
         $scope.CurrentDate = new Date();
 
         $scope.params = $routeParams;
         $scope.currentItem = $routeParams.itemID;
     }])
 
-        // URL Related Classes  
+        // URL Related Classes
 
         // $scope.mainClass = function () {
         //      var active = $route.current.templateUrl;
@@ -237,7 +237,7 @@
 
 
         // $scope.test = $routeParams.test;
-        // console.log(currentItem);  
+        // console.log(currentItem);
 
         // $scope.slug = $routeParams.slug;
 
@@ -263,10 +263,10 @@
     //         restrict: 'A',
     //         link: console.log("weekDay");
     //             var d = new Date();
-    //             var n = d.getDay();        
+    //             var n = d.getDay();
     //                 // if (x == 0){
-    //                 //    return "mark"; 
-    //                 // } 
+    //                 //    return "mark";
+    //                 // }
     //     };
     // })
 
@@ -293,7 +293,7 @@
     // ROUTER CONFIG
     .config(function($routeProvider, $locationProvider) {
         $routeProvider
-        .when('/home', {
+        .when('/', {
             templateUrl: 'home.html',
             controller: 'firstCtrl'
         })
