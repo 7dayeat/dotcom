@@ -1,21 +1,5 @@
 <header>
-    <ng-include src="'../includes/mainNav.html'"></ng-include>
-    <div ng-include='"../../includes/mainNav.html"'></div>
-    <hr>
-    <div ng-include='"includes/homePromo.html"'></div>
-    <div ng-include='"../includes/homePromo.html"'></div>
-    <div ng-include='"../../includes/homePromo.html"'></div>
-    <div ng-include="'includes/homePromo.html'"></div>
-    <div ng-include="'../includes/homePromo.html'"></div>
-    <div ng-include="'../../includes/homePromo.html'"></div>
-    <hr>
-    <ng-include src='"includes/homePromo.html"'></ng-include>
-    <ng-include src='"../includes/homePromo.html"'></ng-include>
-    <ng-include src='"../../includes/homePromo.html"'></ng-include>
-    <ng-include src="'includes/homePromo.html'"></ng-include>
-    <ng-include src="'../includes/homePromo.html'"></ng-include>
-    <ng-include src="'../../includes/homePromo.html'"></ng-include>
-    <hr>
+    <div ng-include='"includes/mainNav.html"'></div>
 </header>
 
 <section class="filter">
@@ -45,7 +29,7 @@
 
                 <ul class="itemList flat" >
                     <li class="header">
-                        <h2><a href="menu/{{ each.name }}" style="background-image: url('_assets/{{each.imageSM}}');"><span>{{ each.name }}</span></a></h2>
+                        <h2><a href="menu/{{ each.name }}" style="background-image: url('assets/{{each.imageSM}}');"><span>{{ each.name }}</span></a></h2>
                     </li>
                     <li class="details">
                         <p><span class="fieldName">Phone:</span> <span class="phone">{{ each.phone }}</span></p>
