@@ -1,4 +1,4 @@
- 
+
  @import url('https://fonts.googleapis.com/css?family=Asap:500,700|Maven+Pro:400,500,700|Merriweather+Sans:400,700|Montserrat+Alternates:500,700|Roboto:500,700|Ubuntu:500,700|Work+Sans:500,700');
 
 
@@ -17,7 +17,7 @@ strong {
 }
 
 /* fix the :focus messing up from bootstrap */
-a:focus {
+a:focus, header nav a {
     color: inherit;
     background: inherit;
     text-decoration: none;
@@ -46,7 +46,7 @@ footer a {
     text-decoration: underline;
 }
 /*-- _COLORS ---------------------------------------------------- */
-a, .a, h1, h1 a, h2, h2 a, h3, .filter a:hover {
+a, .a, h1, h1 a, h2, h2 a, h3, .filter a:hover, header nav a:hover {
     color: #ff0066;
 }
 footer a, .filter a {
@@ -85,6 +85,7 @@ main.menu h2 span {
     font-size: 0.6em;
     line-height: 1;
     font-weight: 400;
+    color: black;
 }
 h3 {
     font-size: 1.3em;
@@ -94,7 +95,7 @@ p {
     margin: 0 0 1.5em;
 }
 ul.native {
-    padding-left: 20px; 
+    padding-left: 20px;
     list-style: url("assets/images/thumbs/plus.svg");
 }
 ul.native p {
@@ -134,12 +135,12 @@ cc {
 
 /* _BOLD --------------------- */
 
-strong, .keywords a, 
+strong, .keywords a,
 .keywords a.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
-    font-weight: 500;
+    font-weight: 600;
 }
 
-/* _CTA ---------------------  
+/* _CTA ---------------------
 
 #FFC3CE #D6E3B5 #6B824A #FFF7EF #636563
 #5C604D #FFBAD2 #F20056 #E5E7E1 #C8CFB4 #A3AE7E
@@ -157,10 +158,10 @@ strong, .keywords a,
     line-height: 1.5;
     font-weight: 500;
     border-radius: 3px;
-    padding: 0.35em 20px; 
+    padding: 0.35em 20px;
 
     border: 1px solid rgba(255, 255, 255, 1);
-    color: white;    
+    color: white;
     transition-property: margin, color, padding;
     transition-duration: 0.5s;
     transition-timing-function: easy-out;
@@ -182,7 +183,7 @@ strong, .keywords a,
 .cta a:hover {
     padding-right: 10px;
     background: rgba(255, 255, 255, 1);
-    color: #ff0066; 
+    color: #ff0066;
 }
 .text-center .cta a:hover {
 }
@@ -190,7 +191,7 @@ strong, .keywords a,
     text-indent: 10px;
 }
 
-/* --------------  header ---------------  */ 
+/* --------------  header ---------------  */
 
 header nav {
     padding: 1em 0;
@@ -199,17 +200,6 @@ header ul li {
 }
 main.menu header ul li a {
 }
-/*
-section.mainlistItem header {
-    position: relative;
-}
-section.mainlistItem header a, .mainlistItem header h2 {
-    position: white;
-}
-section.mainlistItem header h2 {
-    bottom: 10px;
-}
-*/
 .menu .banner {
     /*
     height: 60vh;
@@ -218,7 +208,7 @@ section.mainlistItem header h2 {
     background-size: cover;
     background-position: center;
     padding-top: 5em;
-    padding-bottom: 5em;    
+    padding-bottom: 5em;
 }
 .menu .banner .placard {
     background: rgba(255, 255, 255, 0.9);
@@ -233,22 +223,13 @@ h1.brand {
     color: #fff;
     background: #ff0066;
     border: 3px solid #fff;
-    border-radius: 9% / 27%;  
+    border-radius: 9% / 27%;
     font-size: 19px;
     font-weight: 500;
 
     float: left;
     text-align: center;
     overflow: hidden;
-
-    /*
-    box-shadow:  0 12px 20px -5px rgba(0,0,0,.5);
-    box-shadow: 
-        0 8px 15px -5px rgba(0,0,0,.5),
-        1px 1px 3px 1px rgba(0,0,0,.1) inset,
-        -1px 1px 3px 1px rgba(0,0,0,.1) inset;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.2);
-    */
 }
     .brand a span {
         padding: 8px 16px;
@@ -261,12 +242,6 @@ h1.brand {
         display: block;
         content: "";
         height: 0;
-        /*
-        position: absolute;
-        left: 4px;
-        right: 4px;
-        top: 0;
-        */
     }
     .brand a:before {
         border-top: 3px solid #fff;
@@ -283,7 +258,7 @@ h1.brand {
         text-shadow: none;
     }
     .brand a:hover span {
-        padding-top: 7px;
+        padding-top: 6px;
         padding-bottom: 6px;
     }
     .brand a:hover:before {
@@ -292,7 +267,7 @@ h1.brand {
     .brand a:hover:after {
         border-bottom: 5px solid #ff0066;
     }
-/* --------------  filter ---------------  */ 
+/* --------------  filter ---------------  */
 
 .filter a {
     margin: 0 15px 0 0;
@@ -318,8 +293,7 @@ h1.brand {
     padding: 5%;
 }
 
-
-/* --------------  mainList ---------------  */ 
+/* --------------  mainList ---------------  */
 .itemList li.header h2 a {
     font-size: 0.8em;
     display: block;
@@ -332,7 +306,7 @@ h1.brand {
     overflow: visible;
     padding: 0;
     transition-property: background-size;
-    transition-duration: 3s;    
+    transition-duration: 3s;
     transition-timing-function: easy-in;
 }
 .itemList li.header h2 a:hover {
@@ -360,6 +334,7 @@ h1.brand {
 .itemList .fee {
     text-transform: capitalize;
 }
+
 /* --- .HOVERBOX ---------- */
 .hoverbox {
     position: relative;
@@ -428,7 +403,7 @@ main.menu .itemList .priceRange {
 
 
 
-/* --------------  promo ---------------  */ 
+/* --------------  promo ---------------  */
 section.promo {
     background: #2eb873; /* green */
     background: #2e95b8; /* blue */
@@ -621,7 +596,7 @@ footer .row, footer .row div {
                                             }
 
                                         }
-                                        
+
                                         /* === col-xs-6 braking point ========================================
                                         @media only screen and (max-width : 585px) {
                                             div[class*='col-'] {
@@ -630,7 +605,7 @@ footer .row, footer .row div {
                                             }
                                             section.promo .row {
                                               display: block;
-                                            }            
+                                            }
                                             section.promo ul {
                                                 text-align: left;
                                                 margin: 0 10%;
@@ -702,7 +677,7 @@ footer .row, footer .row div {
 
 
 
-    /* --------------  mainList ---------------  */ 
+    /* --------------  mainList ---------------  */
     main.home .mainlist {
         margin: 4em 30px;
     }
@@ -712,7 +687,7 @@ footer .row, footer .row div {
         padding: 0 10px;
     }
 
-   
+
 
 
 
@@ -813,165 +788,6 @@ footer .row, footer .row div {
         @media only screen and (min-width : 1201px) {
 
         }
-
-
-/* 
-
-#FFC3CE #D6E3B5 #6B824A #FFF7EF #636563
-#5C604D #FFBAD2 #F20056 #E5E7E1 #C8CFB4 #A3AE7E
-#9C1C6B #CA278C #E47297 #FFE9E8 #AA0114 #000000
-
-
-YELLOW BACKGROUND: FFCF00
-PINK LINK: ff0066;
-
-DIF PINK            LH - FF69B4 / DK - FF1493 / FADED - DB7093
-
-UGLY GREEN:         2F4F4F
-WHITE BACKGROUND:   FFF8DC;
-DK WHITE BACKGROUND:FFE4E1;
-CARD TABLE GREEN:   2E8B57;
-BLUE METAL          483D8B
-VERDE MUSGO         556B2F
-FLATTENED MED-DK PINK     BC8F8F
-DK ORANGE PINK      CD5C5C
-FADED dk musgo green 2F4F4F
-;
-;
-eat
-food
-menu
-fresh
--------------
-.eat
-.now
-.click
-.me
-.online
-.sale
-.discount
-.fun
-food.garden
-food.gallery
-.guide
-.help
-.land
-.life
-link
-live
-.menu
-.mom
-.one
-.online
-.organic
-.pro
-.promo
-.party
-.reviews
-.review
-.sale
-.shop
-.supply
-.express
-.directory
-.cheap
-
-.business
-=======================
-
-florida
-miami
-properties
-
-----------------------
-
-.properties
-.PROPERTY
-.investments
- .FINANCE 
- .miami
- .FINANCIAL 
-.ventures
-.forsale
-.estate - Pioneering the art of the .estate sale.
-
-------------
-
-
-
-
-COLORS
-    ff0066
-    bfff00
-
-green (main color)
-    009999   rgba(0, 153, 153, 0.5)
-    00cccc
-    d9ff66
-    ff8000 - orange
-    99cc00
-
-ace600 - real lime
-94c20a - link hover | logo background
-009973 - nav color
-
-739900 - logo hover background
-
-00b386 - blue green used for default heading color
-
-1f473d - dark green highlight background
-66ffff - blue text
-ffff66 - yellow text
-ffd966 - orange text
-
-ff8000 - beutifull text color
-
-daffb3; - light green backgrounds
-d9f0c1;
-dcf8d3;
-f2ffe6
-e6ffcc
-eef7f4 - two nice light blue backgrounds
-daf1eb
-
-    background: #daffb3;
-    background: #d9f0c1;
-    background: #dcf8d3;
-    background: #dcf8d3;
-
-    background: #e5ffeb;
-    background: #b8d65c;
-    background: #ccff99;
-    background: #d9f4be;
-
-        background: rgba(198, 210, 210, 0.9);
-
-nice background rgba(0, 77, 77, 1);
-
-#example1 {
-    background-image: url(img_flwr.gif), url(paper.gif);
-    background-position: right bottom, left top;
-    background-repeat: no-repeat, repeat;
-    padding: 15px;
-}
-
-#00e6ac rgb(0, 230, 172)
-#00cc99 rgb(0, 204, 153)
-#00b386 rgb(0, 179, 134)
-#009973 rgb(0, 153, 115)
-
-
-Triangle bullet code: \2023
-Buller code:          \2022
-
-    blue
-    background: #8000ff;
-    background: #7e00e6;
-
-    background: #6f2a6f;
-    background: #ff4da6;
-
-*/
 
 
 
