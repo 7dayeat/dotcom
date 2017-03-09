@@ -57,33 +57,18 @@
             <div class="col-12">
                 <!-- h2>Welcome to <span ng-bind='currentItem'></span></h2 -->
                 <div ng-repeat="each in food | filter: currentItem">
-                    <ul class="itemList flat">
-                        <li class="details">
-                            <p><span class="fieldName">Phone:</span> <span class="phone">{{ each.phone }}</span></p>
-                            <p><span class="fieldName">Minimum:</span> <span class="minimum">{{ each.minimum }}</span></p>
-                            <p><span class="fieldName">Devilery Fee:</span> <span class="fee">{{ each.fee }}</span></p>
-                        </li>
-                        <li class="address">
-                            <p>
-                                <span class="fieldName">Address:</span>
-                                <span class="overflow">{{ each.address.address1}}{{each.address.address2 }} </br>{{ each.address.city}}, NY &ndash; {{ each.address.zipcode }}</span>
-                            </p>
-                        </li>
-                        <li class="hoverbox hours" ng-mouseover="hoursToggle='open'" ng-mouseleave="hoursToggle=''">
-                            <span class="a">Hours:</span>
-                            <div ng-app="ngAnimate">
-                                <div ng-class="hoursToggle" class="overflow {{CurrentDate | date:'EEE' | lowercase }}">
-                                    <p class="sun"><span class="fieldName">Sun:</span> {{ each.hours.sun}}</p>
-                                    <p class="mon"><span class="fieldName">Mon:</span> {{ each.hours.mon}}</p>
-                                    <p class="tue"><span class="fieldName">Tue:</span> {{ each.hours.tue}}</p>
-                                    <p class="wed"><span class="fieldName">Wed:</span> {{ each.hours.wed}}</p>
-                                    <p class="thu"><span class="fieldName">Thu:</span> {{ each.hours.thu}}</p>
-                                    <p class="fri"><span class="fieldName">Fri:</span> {{ each.hours.fri}}</p>
-                                    <p class="sat"><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    [MENU REPEAT PLACEHOLDER]
+                    <br>
+                    <br>
+                    <br>                    
+                    <br>                     
+                    [MENU REPEAT PLACEHOLDER]
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    [MENU REPEAT PLACEHOLDER]
+                    <br>
                 </div>
             </div>
         </div>
@@ -93,14 +78,14 @@
 <section class="promo menu">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3 col-sm-6 col-12">
+            <div class="col-lg-3 col-6">
                 <div class="gutter text-center">
                     <h3>Did you Know?</h3>
                     <p>A baked sweet potato contains over 400% of your daily requirement for vitamin A?</p>
                     <span class="cta"><a href="home">Tell Me More</a></span>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-12">
+            <div class="col-lg-3 col-6">
                 <div class="gutter text-center">
                     <h3>Better CTA Options</h3>
                     <ul class="native">
@@ -112,7 +97,7 @@
                     <span class="cta"><a href="home">Explore CTAs</a></span>
                </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-12">
+            <div class="col-lg-3 col-6">
                 <div class="gutter text-center">
                     <h3>Black Eyed Peas</h3>
                     <ul class="native">
@@ -123,7 +108,27 @@
                     <span class="cta"><a href="home">Eat It</a></span>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-12">
+            <div class="col-lg-3 col-6">
+                <div class="gutter text-center">
+                    <h3>The New York Times</h3>
+                    <p>Find food and wine news and reviews on restaurants, recipes, cooking, desserts, chefs, fine dining, cuisine, New York restaurants, four-star restaurants andmore.</p>
+                    <span class="cta"><a href="http://www.nytimes.com/pages/dining/index.html">Explore Food</a></span></p>
+               </div>
+            </div>
+
+            <!-- larger size promote -->
+            <div class="col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>Black Eyed Peas</h3>
+                    <ul class="native">
+                        <li><p>Said to bring luck when eaten on New Year's Day</p></li>
+                        <li><p>Are high in protein and fiber</p></li>
+                        <li><p>Are low in fat</p></li>
+                    </ul>
+                    <span class="cta"><a href="home">Eat It</a></span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
                 <div class="gutter text-center">
                     <h3>The New York Times</h3>
                     <p>Find food and wine news and reviews on restaurants, recipes, cooking, desserts, chefs, fine dining, cuisine, New York restaurants, four-star restaurants andmore.</p>
