@@ -3,10 +3,16 @@
         <ng-include src="'includes/mainNav.html'"></ng-include>
         <div class="container-fluid banner" style="background-image: url('assets/{{each.imageLG}}');">
             <div class="row">
-                <div class="col-5 placard">
+                <div class="col-xs-12 col-sm-10 placard">
                     <div class="row">
-                        <div class="col-9 offset-sm-3">
+                        <div class="col-sm-11 offset-sm-1">
                             <h2><span>Welcome to</span> {{each.name}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5 placard">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10 offset-sm-2 pb">
                             <ul class="itemList flat">
                                 <li class="details">
                                     <p><span class="fieldName">Phone:</span> <span class="phone">{{ each.phone }}</span></p>

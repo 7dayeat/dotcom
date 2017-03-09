@@ -5,13 +5,13 @@
 <section class="filter">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-9 keywords">
+            <div class="col-sm-12 col-md-9 keywords pb">
                 <h2>Filter by keyword:</h2>
                 <ul class="flat">
                     <li ng-repeat="each in keywords.split(',')"><a href="home/{{each}}">{{each}}</a> </li>
                 </ul>
             </div>
-            <div class="col-3 search">
+            <div class="col-sm-12 col-md-3 search pb">
                 <label><h2>Search:</h2> <input ng-model="currentItem"></label>
             </div>
         </div>
@@ -23,11 +23,11 @@
         <div class="row" monitor-style="height" update-variable="height">
             <!-- barely explained https://plnkr.co/edit/?p=preview -->
             <div
-                class="col-xs-6 col-sm-4 col-md-3"
+                class="col-6 col-md-4 col-lg-3"
                 ng-repeat="each in food | filter: currentItem"
                 ng-class="{ 'even': $even, 'odd': $odd }" >
 
-                <ul class="itemList flat" >
+                <ul class="itemList flat">
                     <li class="header">
                         <h2><a href="menu/{{ each.name }}" style="background-image: url('assets/{{each.imageSM}}');"><span>{{ each.name }}</span></a></h2>
                     </li>

@@ -1,21 +1,39 @@
 
- @import url('https://fonts.googleapis.com/css?family=Asap:500,700|Maven+Pro:400,500,700|Merriweather+Sans:400,700|Montserrat+Alternates:500,700|Roboto:500,700|Ubuntu:500,700|Work+Sans:500,700');
+ @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700|Maven+Pro:400,500,600,700|Montserrat+Alternates:200,700');
 
 
 body, button, input, optgroup, select, textarea {
     font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
-h1, h2, h3, h4, h6 {
-    font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
+h2, h3, h4, h6 {
     font-weight: 500;
     margin: 0 0 0.75em;
     line-height: 1.3;
 }
-strong {
+h1, .placard h2 span {
+    font-family: 'Montserrat Alternates', Helvetica, Arial, sans-serif;
     font-weight: 700;
+    line-height: 1.3;
 }
 
+/* _BOLD --------------------- */
+
+.placard h2 span {
+    font-weight: 200;
+}
+strong, .keywords a {
+    font-weight: 500;
+}
+.keywords a.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
+    font-weight: 600;
+}
+.placard h2 {
+    font-weight: 400;
+    font-size: 3em;
+}
+
+/* INHERIT ---------------------------------- */
 /* fix the :focus messing up from bootstrap */
 a:focus, header nav a {
     color: inherit;
@@ -77,16 +95,6 @@ section.promo, section.promo h3, .filter h2, .filter a {
 h2 {
     font-size: 2em;
 }
-.placard h2 {
-    margin-bottom: 0.5em;
-}
-main.menu h2 span {
-    display: block;
-    font-size: 0.6em;
-    line-height: 1;
-    font-weight: 400;
-    color: black;
-}
 h3 {
     font-size: 1.3em;
 }
@@ -132,12 +140,31 @@ cc {
     display: block;
 }
 
+/* _placard and _banner --------------------- */
+ .banner > .row .placard:last-child {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0 3px 3px 0;
+}
+.placard h2 {
+    margin-bottom: 0.2em;
+    color: white;
+}
+.placard h2 span {
+    display: block;
+    font-size: 0.4em;
+    line-height: 1;
+    color: white;
+}
 
-/* _BOLD --------------------- */
-
-strong, .keywords a,
-.keywords a.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
-    font-weight: 600;
+.menu .banner {
+    /*
+    height: 60vh;
+    min-height: 300px;
+    */
+    background-size: cover;
+    background-position: center;
+    padding-top: 2em;
+    padding-bottom: 5em;
 }
 
 /* _CTA ---------------------
@@ -194,25 +221,14 @@ strong, .keywords a,
 /* --------------  header ---------------  */
 
 header nav {
-    padding: 1em 0;
+    padding: 0.75em 0;
+    overflow: auto;
 }
-header ul li {
+header ul li.navItem {
+    padding: .125em 0 0 .5em;
+    word-spacing: -2px;
 }
 main.menu header ul li a {
-}
-.menu .banner {
-    /*
-    height: 60vh;
-    min-height: 300px;
-    */
-    background-size: cover;
-    background-position: center;
-    padding-top: 5em;
-    padding-bottom: 5em;
-}
-.menu .banner .placard {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 0 3px 3px 0;
 }
 
 /* === BRAND CSS-LOGO === */
@@ -221,18 +237,18 @@ h1.brand {
 }
 .brand a, .brand a:focus {
     color: #fff;
+    margin: 0 15px 0 0;
     background: #ff0066;
     border: 3px solid #fff;
     border-radius: 9% / 27%;
     font-size: 19px;
-    font-weight: 500;
 
     float: left;
     text-align: center;
     overflow: hidden;
 }
     .brand a span {
-        padding: 8px 16px;
+        padding: 6px 16px 8px;
         display: inline-block;
     }
     .brand a:before, .brand a:after {
@@ -244,11 +260,11 @@ h1.brand {
         height: 0;
     }
     .brand a:before {
-        border-top: 3px solid #fff;
+        border-top: 2px solid #fff;
         border-bottom: 0;
     }
     .brand a:after {
-        border-bottom: 3px solid #fff;
+        border-bottom: 2px solid #fff;
         border-top: 0;
     }
     .brand a:hover {
@@ -258,14 +274,13 @@ h1.brand {
         text-shadow: none;
     }
     .brand a:hover span {
-        padding-top: 6px;
-        padding-bottom: 6px;
+        padding: 5px 16px 7px;
     }
     .brand a:hover:before {
-        border-top: 5px solid #ff0066;
+        border-top: 3px solid #ff0066;
     }
     .brand a:hover:after {
-        border-bottom: 5px solid #ff0066;
+        border-bottom: 3px solid #ff0066;
     }
 /* --------------  filter ---------------  */
 
@@ -290,7 +305,7 @@ h1.brand {
     border: 1px solid #e6005c;
     width: 100%;
     height: 40px;
-    padding: 5%;
+    padding: 1em 0.5em;
 }
 
 /* --------------  mainList ---------------  */
@@ -340,22 +355,25 @@ h1.brand {
     position: relative;
 }
 .hoverbox .overflow {
-    display: none;
     position: absolute;
+    display: none;
     background: #ff0066;
+    width; 90%;
     color: White;
+    padding: 1em;
+}
+.hoverbox .overflow.open {
+    display: block;
+}
+
+/* --- .HOVERBOX ITEMLIST ---- MEDIUM or larger ------ */
+.hoverbox .overflow {
     z-index: 1;
     left: 0;
     bottom: 1.5em;
     padding: 1em;
     border-radius: 3px;
     border: 1px solid white;
-}
-.hoverbox .overflow.open {
-    display: block;
-}
-.hoverbox .overflow.open {
-    display: block;
 }
 
 /* --- .HOVERBOX ITEMLIST ---------- */
@@ -368,7 +386,7 @@ main.menu .itemList .priceRange {
     margin: 1em 0 0 1em;
 }
 
-/* --- .HOVERBOX ITEMLIST HOURS ---------- */
+/* --- .HOVERBOX WIDTH ITEMLIST HOURS ---------- */
 .itemList .hoverbox.hours .overflow {
     width: 12em;
 }
@@ -377,6 +395,7 @@ main.menu .itemList .priceRange {
     font-size: 0.9em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
+
 
 /* --- .HOVERBOX ITEMLIST ADDRESS ---------- */
 .itemList .hoverbox.address .overflow {
@@ -470,64 +489,6 @@ textarea.form-control, .form-control {
     font-size: 0.8em;
 }
 
-/* === _STRUCTURE PADDING ==== 1 ===================================== */
-
-/*
-BOOTSTRAP GRID MEASURES
-Extra small <576px | Max container width: none (auto) | class: .col-
-Small ≥576px | Max container width: 540px | class: .col-sm-*
-Medium ≥768px | Max container width: 720px | class: .col-md-*
-Large ≥992px | Max container width: 960px | class: .col-lg-*
-Extra large ≥1200px | Max container width: 1140px | class: .col-xl-*
-*/
-
-
-/* --- VERTICAL ------------------------------------- VERTICAL ---- */
-
-/* --- VERTICAL GUTTER --------------------- ROW --- */
-
-.row.padding {
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-.row .row {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* --- VERTICAL GUTTER --------------------- COLUMN --- */
-
-.row > div, .row > ng-include > div {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-}
-.row .row > div, .row .row > ng-include > div {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-/* --- OVERWRITES ------------------------------------------------- */
-
-/* -- cancel just half the padding --- [col-no-padding] --- */
-
-.row > div.col-no-padding, .no-padding .row div {
-    padding-bottom: 0;
-}   .no-padding .row div {
-        padding-top: 0;
-    }
-
-/* -- cancel margin only */
-footer .row, footer .row div {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* -- CANCEL ALL the padding and margin, fix side effects */
-.clearfix {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
 /* --- BORDER TOP and BOTTOM ------------------------------------- */
 .border-top {
     border-top: 3px solid rgba(0,0,0,0.031);
@@ -550,8 +511,10 @@ footer .row, footer .row div {
                                         /* === _MOBILE and TABLETS ====== SMALL ================= */
                                         @media only screen and (max-width : 768px) {
 
+
                                             /* --- MOBILE and TABLETS --- */
-                                            .banner video, nav.profile-menu li.profile-menu:hover .dropdown-menu {
+                                            /*
+                                            mobilehide {
                                                 display: none;
                                                 margin: 0;
                                                 padding: 0;
@@ -564,26 +527,17 @@ footer .row, footer .row div {
                                                 margin: 0;
                                                 padding: 0;
                                              }
-                                             /* --- _THEFIRM --------- */
-                                             section.thefirm img.visible-mobile {
-                                                display: block;
-                                                margin: 30px auto;
-                                                width: 60px;
-                                                height: 60px;
-                                             }
-                                             /* --- MOBILE and TABLETS --- */
+                                            */
+                                            
                                             body {
-                                                color: black;
-                                                font-weight: 300;
-                                                -webkit-font-smoothing: subpixel-antialiased;
                                             }
                                             .row {
                                                 margin-top: 0;
                                                 margin-bottom: 0;
                                             }
                                             .row > div[class*='col-'], ng-include > div[class*='col-'] {
-                                                padding-top: 2rem;
-                                                padding-bottom: 2rem;
+                                                padding-top: 1rem;
+                                                padding-bottom: 1rem;
                                             }
                                             .row .row > div {
                                                 padding-top: 0;
@@ -597,24 +551,41 @@ footer .row, footer .row div {
 
                                         }
 
-                                        /* === col-xs-6 braking point ========================================
-                                        @media only screen and (max-width : 585px) {
+                                        /* === col-xs-6 braking point ======================================== */
+                                        @media only screen and (max-width : 575px) {
+
+                                            /* _placard and _banner --------------------- */
+
+                                             .banner > .row .placard:last-child {
+                                                background: white;
+                                                border-radius: 0;
+                                            }
+                                            .menu .banner {
+                                                background-size: auto 100%;
+                                                background-position: center top;
+                                                background-repeat: no-repeat;
+                                                padding-top: 10em;
+                                                padding-bottom: 0;
+                                            }
+
+ /*
                                             div[class*='col-'] {
                                                 width: auto;
                                                 float: none;
                                             }
+*/
                                             section.promo .row {
-                                              display: block;
+                                                display: block;
                                             }
                                             section.promo ul {
                                                 text-align: left;
                                                 margin: 0 10%;
                                             }
                                         }
-                                        */
-
+                                        
                                         /* === MOBILE ONLY ============ XSMALL ================ */
-                                        @media only screen and (max-width : 480px) {}
+                                        @media only screen and (max-width : 480px) {
+                                        }
 
                                         /* === Retina ========================================= */
                                         @media only screen and (max-width : 320px) {
@@ -654,6 +625,55 @@ footer .row, footer .row div {
 /* ========== _MEDIUM or larger = ALL Desktops ============= */
 @media only screen and (min-width: 769px) {
 
+    /* === _STRUCTURE PADDING ==== 1 ===================================== */
+
+    /*
+    BOOTSTRAP GRID MEASURES
+    Extra small <576px | Max container width: none (auto) | class: .col-
+    Small ≥576px | Max container width: 540px | class: .col-sm-*
+    Medium ≥768px | Max container width: 720px | class: .col-md-*
+    Large ≥992px | Max container width: 960px | class: .col-lg-*
+    Extra large ≥1200px | Max container width: 1140px | class: .col-xl-*
+    */
+
+
+    /* --- VERTICAL ------------------------------------- VERTICAL ---- */
+
+    /* --- VERTICAL GUTTER --------------------- COLUMN --- */
+
+    .row > div, .row > ng-include > div {
+        padding-top: 1.5em;
+    }
+    .row > div.pb, .row > ng-include > div.pb {
+        padding-bottom: 1.5em;
+    }
+
+    .row .row > div, .row .row > ng-include > div {
+        padding-top: 0;
+    }
+
+    /* --- OVERWRITES ------------------------------------------------- */
+
+    /* -- cancel just half the padding --- [col-no-padding] --- */
+
+    .row > div.col-no-padding, .no-padding .row div {
+        padding-bottom: 0;
+    }   .no-padding .row div {
+            padding-top: 0;
+        }
+
+    /* -- cancel margin only */
+    footer .row, footer .row div {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    /* -- CANCEL ALL the padding and margin, fix side effects */
+    .clearfix {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
     /* === _STRUCTURE PADDING ==== 2 ===================================== */
 
     /* --- HORIZONTAL ----------------------------------- HORIZONTAL ---- */
@@ -662,10 +682,11 @@ footer .row, footer .row div {
     div[class*='col-'] {
         padding-left: 30px;
         padding-right: 30px;
-
     }
+
     /* --- OVERWRITES FOR HORIZONTAL GUTTER --- */
-    main.home .mainlist div[class*='col-'] {
+    main.home .mainlist div[class*='col-'],
+    div[class*='col-'] div[class*='col-']  {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -677,19 +698,14 @@ footer .row, footer .row div {
 
 
 
-    /* --------------  mainList ---------------  */
+    /* -----  mainList ------------ MEDIUM or larger ---  */
     main.home .mainlist {
         margin: 4em 30px;
     }
 
-
     .itemList {
         padding: 0 10px;
     }
-
-
-
-
 
     /* --- UL or DIV is being used --- --- */
     .half-width {
@@ -768,6 +784,9 @@ footer .row, footer .row div {
 
         /* MEDIUM to LARGE */
         @media only screen and (min-width: 769px) and (max-width : 1199px) {
+                .placard h2 {
+                    font-size: 4em;
+                }
         }
 
         /* MEDIUM only  */
