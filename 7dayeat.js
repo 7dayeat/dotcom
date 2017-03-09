@@ -57,14 +57,14 @@
                 address2: '',
                 city: 'Astoria',
                 zipcode: '11106'},
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
+            hours: [
+                { day: "sun", dayHours: "11am to 12pm" },
+                { day: "mon", dayHours: "11am to 12pm" },
+                { day: "tue", dayHours: "11am to 12pm" },
+                { day: "wed", dayHours: "11am to 12pm" },
+                { day: "thu", dayHours: "11am to 12pm" },
+                { day: "fri", dayHours: "11am to 12pm" },
+                { day: "sat", dayHours: "11am to 12pm" }],
             keywords: 'all dessert soups coffee tea gluten-free salads pasta',
             menu: {}
         },
@@ -81,14 +81,14 @@
                 address2:', Queens Mall',
                 city: 'Flushing',
                 zipcode: '13375'},
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
+            hours: [
+                { day: "sun", dayHours: "9am to 6pm" },
+                { day: "mon", dayHours: "8am to 10pm" },
+                { day: "tue", dayHours: "8am to 10pm" },
+                { day: "wed", dayHours: "8am to 10pm" },
+                { day: "thu", dayHours: "8am to 10pm" },
+                { day: "fri", dayHours: "8am to 12pm" },
+                { day: "sat", dayHours: "8am to 12pm" }],
             keywords: 'all dessert soups coffee tea salads pasta'
         },
         {
@@ -104,14 +104,14 @@
                 address2: '',
                 city: 'Woodside',
                 zipcode: '11309'},
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
+            hours: [
+                { day: "sun", dayHours: "11am to 12pm" },
+                { day: "mon", dayHours: "11am to 12pm" },
+                { day: "tue", dayHours: "11am to 12pm" },
+                { day: "wed", dayHours: "11am to 12pm" },
+                { day: "thu", dayHours: "11am to 12pm" },
+                { day: "fri", dayHours: "11am to 12pm" },
+                { day: "sat", dayHours: "11am to 12pm" }],
             keywords: 'all salad'
         },
         {
@@ -127,14 +127,14 @@
                 address2: '',
                 city: 'Woodside',
                 zipcode: '11309'},
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
+            hours: [
+                { day: "sun", dayHours: "10am to 12pm" },
+                { day: "mon", dayHours: "6am to 12pm" },
+                { day: "tue", dayHours: "6am to 12pm" },
+                { day: "wed", dayHours: "6am to 12pm" },
+                { day: "thu", dayHours: "6am to 12pm" },
+                { day: "fri", dayHours: "6am to 12pm" },
+                { day: "sat", dayHours: "10am to 12pm" }],
             keywords: 'all hamburgers lunch special smoothies juices dessert soups'
         },
         {
@@ -150,14 +150,14 @@
                 address2: '',
                 city: 'Woodside',
                 zipcode: '11309'},
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
+            hours: [
+                { day: "sun", dayHours: "Closed" },
+                { day: "mon", dayHours: "11am to 12pm" },
+                { day: "tue", dayHours: "11am to 12pm" },
+                { day: "wed", dayHours: "11am to 12pm" },
+                { day: "thu", dayHours: "11am to 12pm" },
+                { day: "fri", dayHours: "11am to 12pm" },
+                { day: "sat", dayHours: "Closed" }],
             keywords: 'all soups bagels coffee tea vegetarian vegan'
         },
         {
@@ -173,14 +173,14 @@
                 address2: '1C',
                 city: 'Flushing',
                 zipcode: '11300'},
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
+            hours: [
+                { day: "sun", dayHours: "8am to 12pm" },
+                { day: "mon", dayHours: "8am to 12pm" },
+                { day: "tue", dayHours: "8am to 12pm" },
+                { day: "wed", dayHours: "8am to 12pm" },
+                { day: "thu", dayHours: "8am to 12pm" },
+                { day: "fri", dayHours: "8am to 12pm" },
+                { day: "sat", dayHours: "8am to 12pm" }],
             keywords: 'all deli soups subs pizza juices dessert coffee tea bagels'
         },
         {
@@ -197,14 +197,14 @@
                 city: 'Jamaica',
                 zipcode: '13076'
             },
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
+            hours: [
+                { day: "sun", dayHours: "10am to 10pm" },
+                { day: "mon", dayHours: "Sorry we are closed" },
+                { day: "tue", dayHours: "10am to 10pm" },
+                { day: "wed", dayHours: "10am to 10pm" },
+                { day: "thu", dayHours: "10am to 10pm" },
+                { day: "fri", dayHours: "10am to 10pm" },
+                { day: "sat", dayHours: "10am to 10pm" }],
             keywords: 'all lunch special hamburgers salads american italian pasta mexican mediterranean turkish greek asian chineese thai soups subs seafood grill diner breakfast deli bagels coffee tea smoothies juices dessert healthy vegetarian vegan gluten-free'
         }];
 

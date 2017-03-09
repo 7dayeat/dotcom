@@ -36,18 +36,13 @@
                         <p><span class="fieldName">Minimum:</span> <span class="minimum">{{ each.minimum }}</span></p>
                         <p><span class="fieldName">Devilery Fee:</span> <span class="fee">{{ each.fee }}</span></p>
                     </li>
-
                     <li class="hoverbox hours" ng-mouseover="hoursToggle='open'" ng-mouseleave="hoursToggle=''">
                         <span class="a">Hours:</span>
                         <div ng-app="ngAnimate">
                             <div ng-class="hoursToggle" class="overflow {{CurrentDate | date:'EEE' | lowercase }}">
-                                <p class="sun"><span class="fieldName">Sun:</span> {{ each.hours.sun}}</p>
-                                <p class="mon"><span class="fieldName">Mon:</span> {{ each.hours.mon}}</p>
-                                <p class="tue"><span class="fieldName">Tue:</span> {{ each.hours.tue}}</p>
-                                <p class="wed"><span class="fieldName">Wed:</span> {{ each.hours.wed}}</p>
-                                <p class="thu"><span class="fieldName">Thu:</span> {{ each.hours.thu}}</p>
-                                <p class="fri"><span class="fieldName">Fri:</span> {{ each.hours.fri}}</p>
-                                <p class="sat"><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p>
+                                <div ng-repeat="each in each.hours">
+                                    <p class="{{ each.day }}" ng-class="{ 'even': $even, 'odd': $odd }"><span class="fieldName">{{ each.day}}:</span> {{ each.dayHours }}</p>
+                                </div>                                 
                             </div>
                         </div>
                     </li>
