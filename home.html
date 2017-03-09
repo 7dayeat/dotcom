@@ -23,13 +23,13 @@
         <div class="row" monitor-style="height" update-variable="height">
             <!-- barely explained https://plnkr.co/edit/?p=preview -->
             <div
-                class="col-12 col-sm-6 col-md-4 col-lg-3"
+                class="col-12 col-sm-6 col-md-4"
                 ng-repeat="each in food | filter: currentItem"
                 ng-class="{ 'even': $even, 'odd': $odd }" >
 
                 <ul class="itemList flat">
                     <li class="header">
-                        <h2><a href="menu/{{ each.name }}" style="background-image: url('assets/{{each.imageSM}}');"><span>{{ each.name }}</span></a></h2>
+                        <h3><a href="menu/{{ each.name }}" style="background-image: url('assets/{{each.imageSM}}');"><span>{{ each.name }}</span></a></h3>
                     </li>
                     <li class="details">
                         <p><span class="fieldName">Phone:</span> <span class="phone">{{ each.phone }}</span></p>
@@ -37,7 +37,7 @@
                         <p><span class="fieldName">Devilery Fee:</span> <span class="fee">{{ each.fee }}</span></p>
                     </li>
                     <li class="hoverbox hours" ng-mouseover="hoursToggle='open'" ng-mouseleave="hoursToggle=''">
-                        <span class="a">Hours:</span>
+                        <span class="a">Hours</span>
                         <div ng-app="ngAnimate">
                             <div ng-class="hoursToggle" class="overflow {{CurrentDate | date:'EEE' | lowercase }}">
                                 <div ng-repeat="each in each.hours">

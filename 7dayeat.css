@@ -22,13 +22,13 @@ h1, .placard h2 span {
 .placard h2 span {
     font-weight: 200;
 }
-strong, .keywords a {
+strong, .keywords a, .a, h3 {
     font-weight: 500;
 }
 .keywords a.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
     font-weight: 600;
 }
-.placard h2 {
+.placard h2, h4  {
     font-weight: 400;
     font-size: 2.3em;
 }
@@ -38,7 +38,6 @@ strong, .keywords a {
 a:focus, header nav a {
     color: inherit;
     background: inherit;
-    text-decoration: none;
 }
 
 /* --- _SECTIONS ---------------------------- */
@@ -57,29 +56,38 @@ header {
 }
 /*-- _LINKS ---------------------------------------------------- */
 
-a {
+a, a:focus, header nav a:hover, .promo h2 a:hover, .promo h4 a:hover, .promo p a:hover {
     text-decoration: none;
 }
-footer a {
+footer a, .promo h2 a, .promo h4 a, .promo p a {
     text-decoration: underline;
 }
 /*-- _COLORS ---------------------------------------------------- */
-a, .a, h1, h1 a, h2, h2 a, h3, .filter a:hover, header nav a:hover {
+a, .a, h1, h1 a, .filter a:hover, header nav a:hover {
     color: #ff0066;
 }
+h2, h2 a, h3, h3 a {
+    color: black;
+}
+/*
+DIF PINK         ff6699   LH - FF69B4 / DK - FF1493 / FADED - DB7093
+*/
+
+
 footer a, .filter a {
     color: Black;
 }
 a:hover, .a:hover {
-    color: #7e00e6;
-    text-decoration: none;
+    color: Black;
+    text-decoration: underline;
     cursor: pointer;
 }
-section.promo, section.promo h3, .filter h2, .filter a {
+section.promo, section.promo h3, .filter h2, .filter a, .promo h2 a, .promo h4 a, .promo p a {
     color: white;
 }
 .keywords h2, .keywords a {
     color: black;
+    color: #303913;
 }
 .filter .container-fluid {
     background: #ff0066;
@@ -87,13 +95,16 @@ section.promo, section.promo h3, .filter h2, .filter a {
 /*-- _HEADINGS and COPY -------------------------------------------- */
 
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
 }
 h3 {
+    font-size: 1.7em;
+}
+h4 {
     font-size: 1.3em;
 }
 p {
-    line-height: 1.5;
+    line-height: 1.35;
     margin: 0 0 1.5em;
 }
 ul.native {
@@ -103,13 +114,16 @@ ul.native {
 ul.native p {
     margin-bottom: 0.3em;
 }
+ul.native.flat p {
+    margin-bottom: 1`em;
+}
 /* for menus or links lists - current use: .filter */
 ul.flat ,ul.flat li, ul.flat p, address {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.text-center ul.native {
+.text-center ul.native:not(.flat) { 
     text-align: left;
     margin: 0 0 1.3em;
 }
@@ -136,8 +150,11 @@ cc {
 
 /* - _KEYWORDS ----------------- */
 .filter .keywords {
-    background: rgb(248, 189, 0);
-    background: rgb(255, 207, 0);
+    background: rgb(220, 160, 0);
+    background: #e4c567;
+    background: #d6ec93;
+    background: #e8e87d;
+    background: #e2ecc6;
 }
 .keywords ul {
     margin-left: -1em;
@@ -197,15 +214,21 @@ cc {
     font-size: 1.1em;
     letter-spacing: 1px;
     line-height: 1.5;
-    font-weight: 500;
     border-radius: 3px;
     padding: 0.35em 20px;
 
-    border: 1px solid rgba(255, 255, 255, 1);
-    color: white;
+    border: 1px solid Black;
+    color: Black;
     transition-property: margin, color, padding;
     transition-duration: 0.5s;
     transition-timing-function: easy-out;
+}
+.promo .cta a {
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: white;
+}
+.couple .cta a {
+    background: white;
 }
 .cta a:after {
     content: "\271A";
@@ -225,21 +248,26 @@ cc {
     padding-right: 10px;
     background: rgba(255, 255, 255, 1);
     color: #ff0066;
+    border-color: #ff0066;
+    text-decoration: none;
 }
 .text-center .cta a:hover {
 }
 .cta a:hover:after {
     text-indent: 10px;
 }
-
+.promo .cta a:hover {
+    border-color: White;
+    color: black;
+}
 /* --------------  header ---------------  */
 
 header nav {
-    padding: 0.75em 0;
+    padding: 1em 0;
     overflow: auto;
 }
 header ul li.navItem {
-    padding: .3em 0 0 .25em;
+    padding: .25em;
 }
 header ul li a {
     padding: .25em .5em;
@@ -313,39 +341,47 @@ h1.brand {
 }
 
 /* --------------  mainList ---------------  */
-.itemList li.header h2 a {
+.itemList li.header h3 {
+    margin: 0 0 0.25em 0;
+}
+.itemList li.header h3 a {
+    min-height: 9em;
+    line-height: 1;
     font-size: 0.8em;
     display: block;
-    background-size: 100%;
+    background-size: 225%;
     background-position: center;
-    min-height: 6em;
     position: relative;
-    border-radius: 5px 5px 5px 5px;
-    margin: 0 -14px;
+    border-radius: 3px;
     overflow: visible;
     padding: 0;
+    margin: 0 -15px;
     transition-property: background-size;
     transition-duration: 3s;
     transition-timing-function: easy-in;
 }
-.itemList li.header h2 a:hover {
+.itemList li.header h3 a:hover {
     color: inherit;
     transition-duration: .5s;
-    background-size: 175%;
+    background-size: 110%;
 }
 .itemList li.header span {
     transition-duration: .5s;
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     width: 100%;
     background: rgba(255, 255, 255, .8);
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 3px 3px;
     padding: .25em 15px .35em;
     margin: 0;
 }
-.itemList li.header h2 a:hover span {
+.itemList li.header h3 a:hover span {
     background: rgba(255, 255, 255, .95);
+}
+.itemList.flat {
+    padding: 0 15px;
+    margin-bottom: 2em;
 }
 .itemList p {
     text-align: right;
@@ -362,7 +398,6 @@ h1.brand {
     position: absolute;
     display: none;
     background: #ff0066;
-    width; 90%;
     color: White;
     padding: 1em;
 }
@@ -391,7 +426,7 @@ main.menu .itemList .priceRange {
 
 /* --- .HOVERBOX WIDTH ITEMLIST HOURS ---------- */
 .itemList .hoverbox.hours .overflow {
-    width: 12em;
+    width: 15em;
 }
 .itemList .hoverbox.hours .overflow p {
     line-height: 1.3;
@@ -423,6 +458,9 @@ main.menu .itemList .priceRange {
     float: left;
     min-width: 40%;
 }
+.hours .fieldName {
+    min-width: 30%;
+}
 /* the content container that doent wrap around the item */
 .overflow {
     overflow: auto;
@@ -434,41 +472,43 @@ main.menu .itemList .priceRange {
 
 /* --------------  promo ---------------  */
 section.promo {
-    background: #2eb873; /* green */
-    background: #2e95b8; /* blue */
-    background: #b82e65; /* red */
-    background: #b54853; /* brown */
-    background: #FF1493; /* pink */
-    background: #ff0066; /* DEFAULT */
+    background: #b1cc66;
     color: rgba(255,255,255,0.95);
 }
-section.promo.menu {
-    background: #2e95b8; /* blue */
-    background: #b54853; /* brown */
-    background: #2eb873; /* green */
+section.promo .gutter {
+    padding: 1em 0 2.25em;
 }
-section.promo.menu.couple {
-    background: #222;
+
+section.promo.menu {
+    background: #b54853; /* brown */
+}
+section.menu.couple {
+    background: White;
+    margin: 2em 0;
+}
+section.menu.couple .gutter {
+    padding: 1.5em 4%;
+    margin: 0 2% 1em;
+    background: #eee;
+    border-radius: 3px;
 }
 section.promo .row > div:first-child {
-    background: rgba(0,0,0, 0.2);
+    background: rgba(0,0,0, 0.3);
 }
 section.promo .row > div:nth-child(2) {
     background: rgba(0,0,0,0.4);
 }
 section.promo .row > div:nth-child(3){
-    background: rgba(0,0,0, 0);
+    background: rgba(0,0,0, 0.5);
 }
 section.promo .row > div:nth-child(4){
     background: rgba(0,0,0,0.6);
 }
 
-/*
-DIF PINK            LH - FF69B4 / DK - FF1493 / FADED - DB7093
-*/
-
-
-
+section.couple h2, section.promo h3 {
+    font-weight: 400;
+    margin-bottom: 1.25em;
+}
 
 form {
 }
@@ -718,11 +758,14 @@ textarea.form-control, .form-control {
 
     /* -----  mainList ------------ MEDIUM or larger ---  */
     main.home .mainlist {
-        margin: 4em 30px;
+        margin: 3em 15px;
     }
 
     .itemList {
         padding: 0 10px;
+    }
+    section.menu.couple {
+        margin-bottom: 3em;
     }
 
     /* --- UL or DIV is being used --- --- */
@@ -753,20 +796,20 @@ textarea.form-control, .form-control {
         margin: auto;
         background: #f8f8f8;
         box-shadow:  0 0 0 2000px rgba(0,0,0,0.4);
-        border-radius: 8px 8px 6px 6px;
+        border-radius: 4px 4px 3px 3px;
         border: 1px solid #555;
     }
     .popup .header {
         background: #2eb873;
         padding: 0 2%;
         cursor: pointer;
-        border-radius: 6px 6px 0 0;
+        border-radius: 3px 3px 0 0;
     }
     .popup-content {
         overflow: auto;
         background: white;
         padding: 15px 2%;
-        border-radius: 0 0 0 6px;
+        border-radius: 0 0 0 3px;
 
     }
     .credits-content {
@@ -827,6 +870,13 @@ textarea.form-control, .form-control {
             .placard h2 {
                 font-size: 4em;
             }
+            section.menu.couple {
+                font-size: 1.125em;
+            }
+            section.menu.couple .gutter {
+                padding-left: 7%;
+                padding-right: 7%;
+            }
 
         }
 
@@ -838,6 +888,9 @@ textarea.form-control, .form-control {
             }
             header ul li a:hover {
                 background: #f3f3f3;
+            }
+            .itemList li.header h3 a {
+                font-size: 1em;
             }
 
         }
