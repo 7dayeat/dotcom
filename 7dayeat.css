@@ -1,12 +1,12 @@
 
- @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700|Maven+Pro:400,500,600,700|Work+Sans:200');
+ @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700|Maven+Pro:400,500,600,700|Work+Sans:200,400,700');
 
 
 body, button, input, optgroup, select, textarea {
     font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
-section.couple h2, section.promo h3, section.promo h4 {
+section.couple h2, section.promo h3 {
     font-family: 'Work Sans', Helvetica, Arial, sans-serif;
     font-weight: 200;
 }
@@ -37,10 +37,6 @@ strong, .keywords a, .a, h3 {
 }
 .keywords a.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
     font-weight: 600;
-}
-.placard h2, h4  {
-    font-weight: 400;
-    font-size: 2.3em;
 }
 
 /* INHERIT ---------------------------------- */
@@ -105,18 +101,21 @@ section.promo, section.promo h3, .filter h2, .filter a, .promo h2 a, .promo h4 a
 /*-- _HEADINGS and COPY -------------------------------------------- */
 
 h2, h3 {
-    line-height: 1.3;
-    margin-bottom: .5em;
+    line-height: 1.25;
     font-size: 1.8em;
 }
 .promo h3, .couple h2 {
-    margin-bottom: 1.25em;
+    margin-bottom: 2rem;
+}
+.promo .row > div:first-child h3 {
+    font-size: 3em;
+    line-height: 1;
 }
 h3 {
-    font-size: 1.7em;
+    font-size: 1.9em;
 }
 h4 {
-    line-height: 1.3;
+    line-height: 1.2;
     margin-bottom: 0.5em;
     font-size: 1.3em;
 }
@@ -140,7 +139,7 @@ ul.flat ,ul.flat li, ul.flat p, address {
     padding: 0;
     margin: 0;
 }
-.text-center ul.native:not(.flat) { 
+.text-center ul.native:not(.flat) {
     text-align: left;
     margin: 0 0 1.3em;
 }
@@ -194,9 +193,11 @@ cc {
     border-radius: 0 3px 3px 0;
 }
 .placard h2 {
-    margin-bottom: 0.2em;
+    margin-bottom: 0;
     color: white;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    font-weight: 200;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 .placard h2 span {
     display: block;
@@ -283,7 +284,7 @@ header nav li.navItem {
     padding: .25em;
 }
 header nav li a {
-    padding: .25em .5em;
+    padding: .5em 0;
     letter-spacing: -1px;
     border-radius: 3px;
 }
@@ -292,6 +293,7 @@ footer {
     border-top: 1px solid black;
     padding-top: 1em;
     background: #eee;
+    font-size: 0.8em;
 }
 footer a, footer p, footer div {
     color: #333;
@@ -301,7 +303,7 @@ h1.brand {
     margin: 0;
     line-height: 1;
 }
-.brand a, .brand a:focus {
+.brand a {
     color: #fff;
     margin: 0 15px 0 0;
     padding: 0;
@@ -368,7 +370,7 @@ h1.brand {
     margin: 0 0 0.25em 0;
 }
 .itemList li.header h3 a {
-    min-height: 9em;
+    min-height: 7em;
     line-height: 1;
     font-size: 0.8em;
     display: block;
@@ -518,7 +520,7 @@ section.menu.couple {
     margin: 4em 0 3.25em;
 }
 section.menu.couple .gutter {
-    padding: 1.5em 10%;
+    padding: 2em 10%;
     margin: 0 2% 1em;
     background: #eee;
     border-radius: 3px;
@@ -645,6 +647,12 @@ textarea.form-control, .form-control {
 
                                         }
 
+
+
+
+
+
+
                                         /* === col-xs-6 braking point ======================================== */
                                         @media only screen and (max-width : 575px) {
 
@@ -661,6 +669,10 @@ textarea.form-control, .form-control {
                                             .placard h2 {
                                                 color: Black;
                                                 text-shadow: none;
+                                                font-weight: 700;
+                                            }
+                                            .placard h2 span {
+                                                font-weight: 500;
                                             }
                                             .menu .banner {
                                                 background-size: auto 100%;
@@ -687,10 +699,21 @@ textarea.form-control, .form-control {
                                                 word-spacing: 2px;
                                             }
                                             h1.brand a {
-                                                margin-bottom: 1em;
+                                                margin-bottom: .5em;
                                             }
-                                                                                    
+                                            header nav {
+                                                padding-top: 1em;
+                                                padding-bottom: 1em;
+                                            }
+
                                         }
+
+
+
+
+
+
+
 
                                         /* === MOBILE ONLY ============ XSMALL ================ */
                                         @media only screen and (max-width : 480px) {
@@ -698,8 +721,12 @@ textarea.form-control, .form-control {
 
                                         /* === Retina ========================================= */
                                         @media only screen and (max-width : 320px) {
-                                           cc {
+                                            c, cc {
                                                 word-brake: normal;
+                                                white-space: normal;
+                                            }
+                                            .row {
+                                                display: block !important;
                                             }
                                             body {
                                             }
@@ -713,6 +740,15 @@ textarea.form-control, .form-control {
                                                 max-width: auto;
                                                 max-width: none;
                                                 float: none;
+                                            }
+                                            .cta a:after, .cta a:hover:after {
+                                                display: none;
+                                            }
+                                            .cta a, .cta a:hover {
+                                                border: 0;
+                                                padding: 0.25em;
+                                                margin: 0;
+                                                text-indent: 0;
                                             }
 
                                         }
@@ -759,15 +795,14 @@ textarea.form-control, .form-control {
 
     /* --- VERTICAL GUTTER --------------------- COLUMN --- */
 
-    .row > div, .row > ng-include > * {
-        padding-top: 1.5em;
-    }
-    .row > div.pb, .row > ng-include > *.pb {
-        padding-bottom: 1.5em;
+    .row > div[class*='col-'], .row > ng-include > div[class*='col-'] {
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
 
     .row .row > div, .row .row > ng-include > * {
         padding-top: 0;
+        padding-bottom: 0;
     }
 
     /* --- OVERWRITES ------------------------------------------------- */
@@ -819,7 +854,7 @@ textarea.form-control, .form-control {
         padding: 0 10px;
     }
     section.menu.couple {
-        margin-bottom: 5em;
+        margin-bottom: 3em;
     }
 
     /* --- UL or DIV is being used --- --- */
@@ -931,6 +966,12 @@ textarea.form-control, .form-control {
                 padding-left: 10%;
                 padding-right: 10%;
             }
+            .itemList li.header h3 a {
+                min-height: 10em;
+            }
+            .itemList li.header h3 a {
+                min-height: 9em;
+            }
 
         }
 
@@ -944,7 +985,7 @@ textarea.form-control, .form-control {
                 background: #f3f3f3;
             }
             .itemList li.header h3 a {
-                font-size: 1em;
+                min-height: 9.5em;
             }
 
         }
@@ -952,5 +993,29 @@ textarea.form-control, .form-control {
 
 
 
+/*
 
+
+
+    Rules
+    Computed
+    Animations
+    Fonts
+
+element {
+
+}
+popup wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+}
+popup {
+    position: fixed;
+    z-index: 1;
+}
+*/
 
