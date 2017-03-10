@@ -659,7 +659,8 @@ textarea.form-control, .form-control {
                                                 border-radius: 0;
                                             }
                                             .placard h2 {
-2                                                color: inherit;
+                                                color: Black;
+                                                text-shadow: none;
                                             }
                                             .menu .banner {
                                                 background-size: auto 100%;
