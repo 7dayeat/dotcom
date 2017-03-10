@@ -32,7 +32,7 @@ light green: #e2ecc6;
     font-weight: 200;
     padding-left: 4px;
 }
-strong, .keywords a, .a, h3, .filter h2 {
+strong, .keywords a, .a, h3, .filter h2, span.a, .priceRange {
     font-weight: 500;
 }
 .keywords a.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
@@ -289,10 +289,10 @@ header nav li a {
     border-radius: 3px;
 }
 footer {
-    padding-bottom: 30px;
-    border-top: 1px solid black;
+    margin-top: 3em;
     padding-top: 1em;
-    background: #eee;
+    padding-bottom: 1em;
+    border-top: 1px solid #ddd;
     font-size: 0.8em;
 }
 footer a, footer p, footer div {
@@ -500,7 +500,7 @@ main.menu .itemList .priceRange {
 
 
 
-/* --------------  promo ---------------  */
+/* --------------  _promo ---------------  */
 section.promo {
     color: rgba(255,255,255,0.95);
 }
@@ -527,10 +527,10 @@ section.promo .row > div:first-child {
     background: #596732;
 }
 section.promo .row > div:nth-child(2) {
-    background: #ff0066;
+    background: #cc0052;
 }
 section.promo .row > div:nth-child(3){
-    background: #778a42;
+    background: #596732;
 }
 section.promo .row > div:nth-child(4){
     background: #cc0052;
@@ -627,6 +627,9 @@ textarea.form-control, .form-control {
                                                 padding: 0 !important;
                                                 margin: 0 !important;
                                             }
+                                            footer {
+                                                background: #eee;
+                                                }
                                             footer .d-flex {
                                                 display: block !important;
                                                 text-align: center;
@@ -646,7 +649,7 @@ textarea.form-control, .form-control {
                                                 background: #cc0052;
                                             }
                                             section.promo .row > div:nth-child(4){
-                                                background: #778a42;
+                                                background: #596732;
                                             }
                                         }
 
@@ -957,7 +960,7 @@ textarea.form-control, .form-control {
                 background: #cc0052;
             }
             section.promo .row > div:nth-child(4){
-                background: #778a42;
+                background: #596732;
             }
         }
 
