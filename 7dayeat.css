@@ -11,7 +11,7 @@ section.couple h2, section.promo h3 {
     font-weight: 200;
 }
 h2, h3, h4, h6 {
-    font-weight: 500;
+    font-weight: 400;
     margin: 0 0 0.5em;
 }
 h1, .placard h2 span {
@@ -32,7 +32,7 @@ light green: #e2ecc6;
     font-weight: 200;
     padding-left: 4px;
 }
-strong, .keywords a, .a, h3 {
+strong, .keywords a, .a, h3, .filter h2 {
     font-weight: 500;
 }
 .keywords a.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
@@ -196,8 +196,8 @@ cc {
     margin-bottom: 0;
     color: white;
     font-weight: 200;
-    font-size: 2em;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-size: 2.5em;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
 }
 .placard h2 span {
     display: block;
@@ -317,7 +317,7 @@ h1.brand {
     overflow: hidden;
 }
     .brand a span {
-        padding: 11px 10px 11px;
+        padding: 13px 10px 11px;
         display: inline-block;
     }
     .brand a:before, .brand a:after {
@@ -343,7 +343,7 @@ h1.brand {
         text-shadow: none;
     }
     .brand a:hover span {
-        padding: 10px 10px 10px;
+        padding: 12px 10px 10px;
     }
     .brand a:hover:before {
         border-top: 3px solid #ff0066;
