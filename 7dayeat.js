@@ -69,7 +69,7 @@
             menu: {}
         },
         {
-            name: 'Pizza Selvagem',
+            name: 'Linos Pizza & Pasta',
             imageSM: 'pizza_selvagem.jpg',
             imageLG: 'pizza_selvagem.jpg',
             phone:'718-555-5643',
@@ -92,10 +92,10 @@
             keywords: 'all dessert soups coffee tea salads pasta'
         },
         {
-            name:'Cabrera Salad',
+            name:'Soup and Salad',
             imageSM: 'Salad_Cabrera.jpg',
             imageLG: 'Salad_Cabrera.jpg',
-            phone:'800-CABRERA',
+            phone:'800-SUPSALAD',
             minimum: '$10.00',
             fee: 'free',
             priceRance: '$$$',
@@ -184,7 +184,7 @@
             keywords: 'all deli soups subs pizza juices dessert coffee tea bagels'
         },
         {
-            name:'Juliette Breakfast and Dinner',
+            name:'Dont-Skip Dinner',
             imageSM: 'Juliette_Breakfast.jpg',
             imageLG: 'Juliette_Breakfast.jpg',
             phone:'718-555-5678',
