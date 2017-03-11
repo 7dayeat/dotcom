@@ -6,7 +6,7 @@ body, button, input, optgroup, select, textarea {
     font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
-section.couple h2, section.promo h3 {
+section.couple h2, .promo h3 {
     font-family: 'Work Sans', Helvetica, Arial, sans-serif;
     font-weight: 200;
 }
@@ -57,6 +57,7 @@ body {
     */
     color: Black;
     background: White;
+    font-size: 1.1rem;
 }
 header {
 }
@@ -88,7 +89,7 @@ a:hover, .a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
-section.promo, section.promo h3, .filter h2, .filter a, .promo h2 a, .promo h4 a, .promo p a {
+.promo, .promo h3, .filter h2, .filter a, .promo h2 a, .promo h4 a, .promo p a {
     color: white;
 }
 .keywords h2, .keywords a {
@@ -110,6 +111,7 @@ h2, h3 {
 .promo .row > div:first-child h3 {
     font-size: 3em;
     line-height: 1;
+    margin-bottom: 0.25em;
 }
 h3 {
     font-size: 1.9em;
@@ -293,10 +295,13 @@ footer {
     padding-top: 1em;
     padding-bottom: 1em;
     border-top: 1px solid #ddd;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 footer a, footer p, footer div {
     color: #333;
+}
+footer .copyright {
+    font-size: 12px;
 }
 /* === BRAND CSS-LOGO === */
 h1.brand {
@@ -501,41 +506,74 @@ main.menu .itemList .priceRange {
 
 
 /* --------------  _promo ---------------  */
-section.promo {
+.promo {
     color: rgba(255,255,255,0.95);
 }
-section.promo .gutter {
-    padding: 1.25em 5% 1.5em;
+.promo .gutter {
+    padding: 1.25em 0 1em;
+}
+.promo.site .gutter {
+    padding: 1.25em 5% 1em;
 }
 
-section.promo .row > div {
-    border-radius: 0 30% 0% 30%;
+/* Item Promo */
+.promo.item .row > div {
+    border-radius: 8px 30% 8px 30%;
+    border: 5px solid white;
 }
-section.promo.menu {
+.promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(4) {
+    border-radius: 30% 8px 30% 8px;
 }
-section.menu.couple {
+
+/* Site Promo */
+.promo.site .row > div {
+    border-radius: 8px 10% 8px 10%;
+    border: 5px solid white;
+}
+.promo.site .row > div:nth-child(2), .promo.site .row > div:nth-child(3) {
+    border-radius: 10% 8px 10% 8px;
+}
+
+/* Couple Promo */
+.menu.couple {
     background: White;
     margin: 4em 0 3.25em;
 }
-section.menu.couple .gutter {
+.menu.couple .gutter {
     padding: 2em 10%;
     margin: 0 2% 1em;
     background: #eee;
     border-radius: 3px;
 }
-section.promo .row > div:first-child {
+
+/* Promo Colors */
+.promo .row > div:first-child {
     background: #596732;
+    background: #e2ecc6;
 }
-section.promo .row > div:nth-child(2) {
+.promo .row > div:nth-child(2) {
     background: #cc0052;
 }
-section.promo .row > div:nth-child(3){
-    background: #596732;
-}
-section.promo .row > div:nth-child(4){
+.promo .row > div:nth-child(3){
     background: #cc0052;
+}
+.promo .row > div:nth-child(4){
+    background: #e2ecc6;
 }
 
+.promo .row > div:first-child, .promo .row > div:first-child p, .promo .row > div:first-child h3, .promo .row > div:first-child .cta a,
+.promo .row > div:nth-child(4), .promo .row > div:nth-child(4) p, .promo .row > div:nth-child(4) h3, .promo .row > div:nth-child(4) .cta a
+{
+    color: black;
+}
+.promo .row > div:first-child .cta a, .promo .row > div:nth-child(4) .cta a
+{
+    border-color: rgba(0,0,0,0.2);
+}
+.promo .row > div:first-child .cta a:hover, .promo .row > div:nth-child(4) .cta a:hover
+{
+    border-color: rgba(0,0,0,1);
+}
 
 form {
 }
@@ -587,6 +625,12 @@ textarea.form-control, .form-control {
 /* --- DONE ------ DONE ------ DONE -------- DONE ------- DONE -------- DONE -------*/
 
 
+
+
+                                        /* Up to _MEDIUM  */
+                                        @media only screen and (max-width : 992px) {
+                                        }
+
                                         /* === _MOBILE and TABLETS ====== SMALL ================= */
                                         @media only screen and (max-width : 768px) {
 
@@ -636,6 +680,9 @@ textarea.form-control, .form-control {
                                                 border-top: 1px solid #ccc;
                                                 padding-top: 1em;
                                             }
+                                            footer .copyright div:last-child {
+                                                display: none;
+                                            }
                                             .popup .header {
                                                 display: none;
                                             }
@@ -644,13 +691,14 @@ textarea.form-control, .form-control {
                                                 margin-bottom: 1em;
                                                 border-bottom: 1px solid #ccc;
                                             }
+                                            .promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(3) {
+                                                border-radius: 30% 8px 30% 8px;
+                                            }
+                                            .promo.item .row > div:nth-child(4) {
+                                                border-radius: 8px 30% 8px 30%;
+                                            }
 
-                                            section.promo .row > div:nth-child(3){
-                                                background: #cc0052;
-                                            }
-                                            section.promo .row > div:nth-child(4){
-                                                background: #596732;
-                                            }
+                                           
                                         }
 
 
@@ -675,7 +723,7 @@ textarea.form-control, .form-control {
                                             .placard h2 {
                                                 color: Black;
                                                 text-shadow: none;
-                                                font-weight: 700;
+                                                font-weight: 500;
                                             }
                                             .placard h2 span {
                                                 font-weight: 500;
@@ -694,7 +742,7 @@ textarea.form-control, .form-control {
                                                 float: none;
                                             }
                                             */
-                                            section.promo ul {
+                                            .promo ul {
                                                 text-align: left;
                                                 margin: 0 10%;
                                             }
@@ -739,7 +787,7 @@ textarea.form-control, .form-control {
                                             .text-center {
                                                 text-align: left;
                                             }
-                                            section.promo .row {
+                                            .promo .row {
                                                 display: block;
                                             }
                                             div[class*='col-'] {
@@ -750,12 +798,17 @@ textarea.form-control, .form-control {
                                             .cta a:after, .cta a:hover:after {
                                                 display: none;
                                             }
-                                            .cta a, .cta a:hover {
-                                                border: 0;
-                                                padding: 0.25em;
+                                            .promo .cta a, .promo .cta a:hover {
+                                                padding: 0.125em 0.5em;
                                                 margin: 0;
                                                 text-indent: 0;
+                                                border: 1px solid white;
                                             }
+                                            .promo .row > div:first-child .cta a, .promo .row > div:nth-child(4) .cta a,
+                                            .promo .row > div:first-child .cta a:hover, .promo .row > div:nth-child(4) .cta a:hover {
+                                                border: 1px solid black;
+                                            }
+
 
                                         }
 
@@ -952,15 +1005,9 @@ textarea.form-control, .form-control {
 
         /* _MEDIUM only  */
         @media only screen and (min-width: 769px) and (max-width : 992px) {
-            section.promo ul {
+            .promo ul {
                 text-align: left;
                 margin: 0 10%;
-            }
-            section.promo .row > div:nth-child(3){
-                background: #cc0052;
-            }
-            section.promo .row > div:nth-child(4){
-                background: #596732;
             }
         }
 
@@ -998,6 +1045,12 @@ textarea.form-control, .form-control {
             }
             .itemList li.header h3 a {
                 min-height: 9.5em;
+            }                           
+            .promo.site .row > div:nth-child(2), .promo.site .row > div:nth-child(4) {
+                border-radius: 8px 10% 8px 10%;
+            }                         
+            .promo.site .row > div:nth-child(1) {
+                border-radius: 10% 8px 10% 8px;
             }
 
         }

@@ -1,8 +1,18 @@
 <div ng-repeat="each in food | filter: currentItem">
     <header>
+
+        <!-- mainNav - - - - - - - - - - - - - -->
+
         <ng-include src="'includes/mainNav.html'"></ng-include>
+
+
+        <!-- banner - - - - - - - - - - - - - -->
+
         <div class="container-fluid banner" style="background-image: url('assets/{{each.imageLG}}');">
             <div class="row">
+
+                <!-- placard name - - - - - - - - - - - - - -->
+
                 <div class="col-xs-12 col-sm-10 placard">
                     <div class="row">
                         <div class="col-sm-11 offset-sm-1">
@@ -10,6 +20,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- placard info - - - - - - - - - - - - - -->
+
                 <div class="col-xs-12 col-sm-6 col-md-5 placard">
                     <div class="row">
                         <div class="col-xs-12 col-sm-10 offset-sm-2 pb">
@@ -84,16 +97,22 @@
     </div>
 </section>
 
-<section class="menu promo">
+<section class="item promo">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3 col-6">
+
+            <!-- item promo I - - - - - - - - - - - - - -->
+
+            <div class="col-md-3 col-6">
                 <div class="gutter text-center">
                     <h3>20% OFF</h3>
                     <h4>A baked sweet potato contains over 400% of your daily</h4>
                 </div>
             </div>
-            <div class="col-lg-3 col-6">
+
+            <!-- item promo II - - - - - - - - - - - - - -->
+
+            <div class="col-md-3 col-6">
                 <div class="gutter text-center">
                     <h3>Best Sellers!</h3>
                     <h4><a href="home">Rice Noodles</a></h4>
@@ -101,14 +120,20 @@
                     <h4><a href="home">Dollor sit Amet consectetur</a></h4>
                </div>
             </div>
-            <div class="col-lg-3 col-6">
+
+            <!-- item promo III - - - - - - - - - - - - - -->
+
+            <div class="col-md-3 col-6">
                 <div class="gutter text-center">
                     <h3>Black Eyed Peas</h3>
                     <h4>In season $6.00 cup</h4>
                     <span class="cta"><a href="home">Eat It</a></span>
                 </div>
             </div>
-            <div class="col-lg-3 col-6">
+
+            <!-- item promo IV - - - - - - - - - - - - - -->
+
+            <div class="col-md-3 col-6">
                 <div class="gutter text-center">                
                     <h3>Pasta Di Casa</h3>
                     <h4>Are low in fat and high in fiber</h4>
