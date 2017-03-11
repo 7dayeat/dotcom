@@ -22,7 +22,7 @@ h1, .placard h2 span {
 
 /* _colors
 pink: #ff0066;
-light green: #e2ecc6;
+light green: #e2ecc6; f3fae1
 */
 
 
@@ -96,9 +96,6 @@ a:hover, .a:hover {
     color: black;
     color: #303913;
 }
-.filter .container-fluid {
-    background: #ff0066;
-}
 /*-- _HEADINGS and COPY -------------------------------------------- */
 
 h2, h3 {
@@ -111,7 +108,6 @@ h2, h3 {
 .promo .row > div:first-child h3 {
     font-size: 3em;
     line-height: 1;
-    margin-bottom: 0.25em;
 }
 h3 {
     font-size: 1.9em;
@@ -172,7 +168,7 @@ cc {
     background: #e4c567;
     background: #d6ec93;
     background: #e8e87d;
-    background: #e2ecc6;
+    background: #f3fae1;
 }
 .keywords ul {
     margin-left: -1em;
@@ -278,23 +274,25 @@ cc {
 /* --------------  header ---------------  */
 
 header nav {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     line-height: 1;
+    margin-left: -4px;
+    margin-right: -4px;
 }
 header nav li.navItem {
-    padding: .25em;
+    margin-top: 0.25em;
 }
 header nav li a {
-    padding: .5em 0;
+    padding: .25em .5em;
     letter-spacing: -1px;
     border-radius: 3px;
 }
 footer {
-    margin-top: 3em;
+    margin-top: 5em;
     padding-top: 1em;
     padding-bottom: 1em;
-    border-top: 1px solid #ddd;
+    border-top: 2px solid #ddd;
     font-size: 0.7em;
 }
 footer a, footer p, footer div {
@@ -399,11 +397,11 @@ h1.brand {
     transition-duration: .5s;
     display: block;
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     width: 100%;
     background: rgba(255, 255, 255, .8);
     border-radius: 0 0 3px 3px;
-    padding: .25em 15px .35em;
+    padding: .5em 15px;
     margin: 0;
 }
 .itemList li.header h3 a:hover span {
@@ -515,17 +513,39 @@ main.menu .itemList .priceRange {
 .promo.site .gutter {
     padding: 1.25em 5% 1em;
 }
-
+.promo .row, .couple .row {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.promo .row > div, .couple .row > div {
+    border: 15px solid white;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 18px;
+}
+/* Couple Promo */
+.couple {
+    margin: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.couple .row > div {
+    background: #F8F8F8;
+}
+.couple .gutter {
+    padding: 2em;
+    border-radius: 3px;
+}
 /* Item Promo */
 .promo.item .row > div {
-    border-radius: 8px 30% 8px 30%;
-    border: 5px solid white;
+    border-radius: 18px 30% 18px 30%;
 }
 .promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(4) {
-    border-radius: 30% 8px 30% 8px;
+    border-radius: 30% 18px 30% 18px;
 }
 
-/* Site Promo */
+/* Site Promo 
+turn on for site promo border effect (keyword ***) 
 .promo.site .row > div {
     border-radius: 8px 10% 8px 10%;
     border: 5px solid white;
@@ -534,22 +554,11 @@ main.menu .itemList .priceRange {
     border-radius: 10% 8px 10% 8px;
 }
 
-/* Couple Promo */
-.menu.couple {
-    background: White;
-    margin: 4em 0 3.25em;
-}
-.menu.couple .gutter {
-    padding: 2em 10%;
-    margin: 0 2% 1em;
-    background: #eee;
-    border-radius: 3px;
-}
 
 /* Promo Colors */
 .promo .row > div:first-child {
     background: #596732;
-    background: #e2ecc6;
+    background: #f3fae1;
 }
 .promo .row > div:nth-child(2) {
     background: #cc0052;
@@ -558,7 +567,7 @@ main.menu .itemList .priceRange {
     background: #cc0052;
 }
 .promo .row > div:nth-child(4){
-    background: #e2ecc6;
+    background: #f3fae1;
 }
 
 .promo .row > div:first-child, .promo .row > div:first-child p, .promo .row > div:first-child h3, .promo .row > div:first-child .cta a,
@@ -573,6 +582,7 @@ main.menu .itemList .priceRange {
 .promo .row > div:first-child .cta a:hover, .promo .row > div:nth-child(4) .cta a:hover
 {
     border-color: rgba(0,0,0,1);
+    box-shadow: 0 0 20px 0 rgba(0,0,0, .3);
 }
 
 form {
@@ -691,6 +701,14 @@ textarea.form-control, .form-control {
                                                 margin-bottom: 1em;
                                                 border-bottom: 1px solid #ccc;
                                             }
+                                            .promo .row, .couple .row {
+                                                padding-right: 10px;
+                                                padding-left: 10px;
+                                            }
+                                            .promo .row > div, .couple .row > div {
+                                                border-width: 5px;
+                                                border-radius: 8px;
+                                            }
                                             .promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(3) {
                                                 border-radius: 30% 8px 30% 8px;
                                             }
@@ -755,10 +773,6 @@ textarea.form-control, .form-control {
                                             h1.brand a {
                                                 margin-bottom: .5em;
                                             }
-                                            header nav {
-                                                padding-top: 1em;
-                                                padding-bottom: 1em;
-                                            }
 
                                         }
 
@@ -777,7 +791,6 @@ textarea.form-control, .form-control {
                                         @media only screen and (max-width : 320px) {
                                             c, cc {
                                                 word-brake: normal;
-                                                white-space: normal;
                                             }
                                             .row {
                                                 display: block !important;
@@ -854,12 +867,12 @@ textarea.form-control, .form-control {
 
     /* --- VERTICAL GUTTER --------------------- COLUMN --- */
 
-    .row > div[class*='col-'], .row > ng-include > div[class*='col-'] {
+    .row > div[class*='col-'], .row > ng-include > div[class*='col-'], .row > nav[class*='col-'], .row > aside[class*='col-'] {
         padding-top: 1em;
         padding-bottom: 1em;
     }
 
-    .row .row > div, .row .row > ng-include > * {
+    .row .row > div, .row .row > ng-include > div {
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -885,7 +898,7 @@ textarea.form-control, .form-control {
     /* --- HORIZONTAL ----------------------------------- HORIZONTAL ---- */
 
     /* --- HORIZONTAL GUTTER - ALL COLUMNS! --- */
-    div[class*='col-'] {
+    div[class*='col-'], nav[class*='col-'], aside[class*='col-'] {
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -1018,40 +1031,39 @@ textarea.form-control, .form-control {
             .placard h2 {
                 font-size: 4em;
             }
-            section.menu.couple {
+            .menu.couple {
                 font-size: 1.125em;
             }
-            section.menu.couple .gutter {
+            .menu.couple .gutter {
                 padding-left: 10%;
                 padding-right: 10%;
             }
             .itemList li.header h3 a {
-                min-height: 10em;
-            }
-            .itemList li.header h3 a {
                 min-height: 9em;
+            }            
+            header nav li a {
+                padding: 0.85em .5em;
+                display: inline-block;
+            }
+            header nav li a:hover {
+                background: #f3f3f3;
             }
 
         }
 
         /* === _LAST X-LARGE or larger =================================== */
         @media only screen and (min-width : 1201px) {
-            header nav li a {
-                padding: 1em .5em;
-                display: inline-block;
-            }
-            header nav li a:hover {
-                background: #f3f3f3;
-            }
             .itemList li.header h3 a {
                 min-height: 9.5em;
-            }                           
+            }   
+            /*  turn on for site promo border effect (keyword ***)                     
             .promo.site .row > div:nth-child(2), .promo.site .row > div:nth-child(4) {
                 border-radius: 8px 10% 8px 10%;
             }                         
             .promo.site .row > div:nth-child(1) {
                 border-radius: 10% 8px 10% 8px;
             }
+            */
 
         }
 
