@@ -55,7 +55,7 @@ body {
     /*
     font-smooth: never;
     */
-    color: Black;
+    color: #999;
     background: White;
     font-size: 1.1rem;
 }
@@ -105,7 +105,7 @@ h2, h3 {
 .promo h3, .couple h2 {
     margin-bottom: 2rem;
 }
-.promo .row > div:first-child h3 {
+.promo .row > div:first-child h3, .promo .row > div:last-child h3 {
     font-size: 3em;
     line-height: 1;
 }
@@ -259,7 +259,7 @@ cc {
     color: #ff0066;
     border-color: #ff0066;
     text-decoration: none;
-    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .75);
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 1);
 }
 .text-center .cta a:hover {
 }
@@ -289,14 +289,17 @@ header nav li a {
     border-radius: 3px;
 }
 footer {
-    margin-top: 5em;
-    padding-top: 1em;
+    margin-top: 3em;
+    font-size: 0.8em;
+}
+footer .copyright {
+    padding-top: 0.5em;
     padding-bottom: 1em;
-    border-top: 2px solid #ddd;
+    border-top: 1px solid #ccc;
     font-size: 0.7em;
 }
 footer a, footer p, footer div {
-    color: #333;
+    color: #aaa;
 }
 footer .copyright {
     font-size: 12px;
@@ -370,12 +373,12 @@ h1.brand {
 
 /* --------------  mainList ---------------  */
 .itemList li.header h3 {
-    margin: 0 0 0.25em 0;
+    margin: 0 0 0.125em 0;
 }
 .itemList li.header h3 a {
-    min-height: 7em;
+    min-height: 170px;
     line-height: 1;
-    font-size: 0.8em;
+    font-size: 0.9em;
     display: block;
     background-size: 225%;
     background-position: center;
@@ -399,13 +402,15 @@ h1.brand {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, 1);
     border-radius: 0 0 3px 3px;
-    padding: .5em 15px;
+    padding: .25em 15px .3em;
     margin: 0;
 }
 .itemList li.header h3 a:hover span {
-    background: rgba(255, 255, 255, .95);
+    background: rgba(255, 255, 255, 0);
+    color: white;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black;
 }
 main.home .itemList.flat {
     padding: 0 15px;
@@ -664,6 +669,9 @@ textarea.form-control, .form-control {
 
                                             body {
                                             }
+                                            h3 {
+                                                font-size: 1.4em;
+                                            }
                                             .row {
                                                 margin-top: 0;
                                                 margin-bottom: 0;
@@ -682,13 +690,12 @@ textarea.form-control, .form-control {
                                                 margin: 0 !important;
                                             }
                                             footer {
-                                                background: #eee;
+                                                background: #f8f8f8;
                                                 }
                                             footer .d-flex {
                                                 display: block !important;
                                                 text-align: center;
                                                 border-top: 1px solid #ccc;
-                                                padding-top: 1em;
                                             }
                                             footer .copyright div:last-child {
                                                 display: none;
@@ -1022,6 +1029,9 @@ textarea.form-control, .form-control {
                 text-align: left;
                 margin: 0 10%;
             }
+            h3 {
+                font-size: 1.4em;
+            }
         }
 
         /* === LAST _LARGE or larger =================================== */
@@ -1039,7 +1049,7 @@ textarea.form-control, .form-control {
                 padding-right: 10%;
             }
             .itemList li.header h3 a {
-                min-height: 9em;
+                min-height: 200px;
             }            
             header nav li a {
                 padding: 0.85em .5em;
@@ -1054,7 +1064,7 @@ textarea.form-control, .form-control {
         /* === _LAST X-LARGE or larger =================================== */
         @media only screen and (min-width : 1201px) {
             .itemList li.header h3 a {
-                min-height: 9.5em;
+                min-height: 230px;
             }   
             /*  turn on for site promo border effect (keyword ***)                     
             .promo.site .row > div:nth-child(2), .promo.site .row > div:nth-child(4) {
