@@ -549,8 +549,8 @@ main.menu .itemList .priceRange {
     border-radius: 30% 18px 30% 18px;
 }
 
-/* Site Promo 
-turn on for site promo border effect (keyword ***) 
+/* Site Promo
+turn on for site promo border effect (keyword ***)
 .promo.site .row > div {
     border-radius: 8px 10% 8px 10%;
     border: 5px solid white;
@@ -723,7 +723,7 @@ textarea.form-control, .form-control {
                                                 border-radius: 8px 30% 8px 30%;
                                             }
 
-                                           
+
                                         }
 
 
@@ -745,13 +745,18 @@ textarea.form-control, .form-control {
                                                 background: white;
                                                 border-radius: 0;
                                             }
+                                            .banner .row .placard {
+                                                padding-top: .5rem;
+                                                padding-bottom: .5rem;
+                                            }
                                             .placard h2 {
                                                 color: Black;
                                                 text-shadow: none;
-                                                font-weight: 500;
+                                                font-weight: 600;
                                             }
                                             .placard h2 span {
-                                                font-weight: 500;
+                                                font-weight: 600;
+                                                margin-bottom: -.25em;
                                             }
                                             .menu .banner {
                                                 background-size: auto 100%;
@@ -1050,7 +1055,7 @@ textarea.form-control, .form-control {
             }
             .itemList li.header h3 a {
                 min-height: 200px;
-            }            
+            }
             header nav li a {
                 padding: 0.85em .5em;
                 display: inline-block;
@@ -1065,11 +1070,11 @@ textarea.form-control, .form-control {
         @media only screen and (min-width : 1201px) {
             .itemList li.header h3 a {
                 min-height: 230px;
-            }   
-            /*  turn on for site promo border effect (keyword ***)                     
+            }
+            /*  turn on for site promo border effect (keyword ***)
             .promo.site .row > div:nth-child(2), .promo.site .row > div:nth-child(4) {
                 border-radius: 8px 10% 8px 10%;
-            }                         
+            }
             .promo.site .row > div:nth-child(1) {
                 border-radius: 10% 8px 10% 8px;
             }
