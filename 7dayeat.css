@@ -105,10 +105,6 @@ h2, h3 {
 .promo h3, .couple h2 {
     margin-bottom: 2rem;
 }
-.promo .row > div:first-child h3, .promo .row > div:last-child h3 {
-    font-size: 3em;
-    line-height: 1;
-}
 h3 {
     font-size: 1.9em;
 }
@@ -162,33 +158,13 @@ cc {
     display: block;
 }
 
-/* - _KEYWORDS ----------------- */
-.filter .keywords {
-    background: rgb(220, 160, 0);
-    background: #e4c567;
-    background: #d6ec93;
-    background: #e8e87d;
-    background: #f3fae1;
-}
-.keywords ul {
-    margin-left: -1em;
-    margin-left: -1Vw;
-}
-.keywords ul li {
-    display: inline;
-}
-.keywords a {
-    margin-left: 1em;
-    margin: 0 0 0 1Vw;
-    white-space: nowrap;
-    font-size: 1.1em;
-    line-height: 1;
-    text-transform: capitalize;
-}
+
 /* _placard and _banner --------------------- */
  .banner > .row .placard:last-child {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 0 3px 3px 0;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 0 4px 4px 0;
+    color: #666;
+
 }
 .placard h2 {
     margin-bottom: 0;
@@ -212,6 +188,7 @@ cc {
     background-position: center;
     padding-top: 2em;
     padding-bottom: 5em;
+    box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, .75) inset;
 }
 
 /* _CTA --------------------- */
@@ -272,13 +249,18 @@ cc {
     color: white;
 }
 /* --------------  header ---------------  */
-
+/* for static nav enable this
+header nav.col-sm {
+    position: fixed;
+    background: white;
+}
+*/
 header nav {
     padding-top: 1em;
     padding-bottom: 1em;
     line-height: 1;
-    margin-left: -4px;
-    margin-right: -4px;
+    position: fixed;
+    z-index: 1;
 }
 header nav li.navItem {
     margin-top: 0.25em;
@@ -288,6 +270,9 @@ header nav li a {
     letter-spacing: -1px;
     border-radius: 3px;
 }
+
+/* === _footer === */
+
 footer {
     margin-top: 3em;
     font-size: 0.8em;
@@ -297,13 +282,20 @@ footer .copyright {
     padding-bottom: 1em;
     border-top: 1px solid #ccc;
     font-size: 0.7em;
+    font-size: 12px;
 }
 footer a, footer p, footer div {
     color: #aaa;
 }
-footer .copyright {
-    font-size: 12px;
+footer .copyright div:last-child {
+    cursor: pointer;
+    text-decoration: underline;
 }
+footer .copyright div:last-child:hover {
+    color: black;
+    text-decoration: none;
+}
+
 /* === BRAND CSS-LOGO === */
 h1.brand {
     margin: 0;
@@ -357,21 +349,54 @@ h1.brand {
     .brand a:hover:after {
         border-bottom: 3px solid #ff0066;
     }
+
 /* --------------  filter ---------------  */
+
+/* - _KEYWORDS ----------------- */
+.filter .keywords {
+    background: rgb(220, 160, 0);
+    background: #e4c567;
+    background: #d6ec93;
+    background: #e8e87d;
+    background: #f3fae1;
+}
+.keywords ul {
+    margin-left: -1em;
+    margin-left: -1Vw;
+}
+.keywords ul li {
+    display: inline;
+}
+.keywords a {
+    margin-left: 1em;
+    margin: 0 0 0 1Vw;
+    white-space: nowrap;
+    font-size: 1.1em;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+/* --- SERCH --- --- --- */
+
 .filter .search {
+    background: #e23672;
     background: #ff0066;
+    background: #e6005c;
 }
 .filter .search label {
     display: block;
 }
 .filter .search input {
-    border: 1px solid #e6005c;
+    border: 0;
     width: 100%;
     height: 40px;
     padding: 1em 0.5em;
 }
 
 /* --------------  mainList ---------------  */
+main.home .mainlist {
+    margin: 2em 15px;
+}
 .itemList li.header h3 {
     margin: 0 0 0.125em 0;
 }
@@ -383,34 +408,37 @@ h1.brand {
     background-size: 225%;
     background-position: center;
     position: relative;
-    border-radius: 3px;
     overflow: visible;
     padding: 0;
     margin: 0 -15px;
     transition-property: background-size;
-    transition-duration: 3s;
+    transition-duration: 5s;
     transition-timing-function: easy-in;
 }
 .itemList li.header h3 a:hover {
     color: inherit;
-    transition-duration: .5s;
     background-size: 110%;
+    transition-property: background;
+    transition-duration: .5s;
+    transition-timing-function: easy-in;
 }
 .itemList li.header span {
+    transition-property: background;
     transition-duration: .5s;
+    transition-timing-function: easy-in;
     display: block;
     position: absolute;
     bottom: 0;
     width: 100%;
     background: rgba(255, 255, 255, 1);
-    border-radius: 0 0 3px 3px;
     padding: .25em 15px .3em;
     margin: 0;
 }
 .itemList li.header h3 a:hover span {
     background: rgba(255, 255, 255, 0);
     color: white;
-    text-shadow: 1px 1px 0 black, -1px -1px 0 black;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .25), -2px -2px 0 rgba(0, 0, 0, .25);
+
 }
 main.home .itemList.flat {
     padding: 0 15px;
@@ -431,21 +459,14 @@ main.home .itemList.flat {
     position: absolute;
     display: none;
     background: white;
-    box-shadow: 0 0 40px -10px rgba(0,0,0,0.2);
-    padding: 1em;
-    border: 1px solid #ddd;
-}
-.hoverbox .overflow.open {
-    display: block;
-}
-
-/* --- .HOVERBOX ITEMLIST ---- MEDIUM or larger ------ */
-.hoverbox .overflow {
+    box-shadow: 0 0 40px -5px rgba(0,0,0,0.5);
     z-index: 1;
     left: 0;
     bottom: 1.5em;
     padding: .5em 1em;
-    border-radius: 3px;
+}
+.hoverbox .overflow.open {
+    display: block;
 }
 
 /* --- .HOVERBOX ITEMLIST ---------- */
@@ -519,15 +540,15 @@ main.menu .itemList .priceRange {
     padding: 1.25em 5% 1em;
 }
 .promo .row, .couple .row {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 .promo .row > div, .couple .row > div {
-    border: 15px solid white;
+    border: 10px solid white;
     padding-left: 15px;
     padding-right: 15px;
-    border-radius: 18px;
 }
+
 /* Couple Promo */
 .couple {
     margin: 20px 0;
@@ -541,40 +562,37 @@ main.menu .itemList .priceRange {
     padding: 2em;
     border-radius: 3px;
 }
-/* Item Promo */
-.promo.item .row > div {
-    border-radius: 18px 30% 18px 30%;
+
+/* Home Site Promo */
+main.home .promo.site .row > div {
+    border-radius: 30% 0 30% 0;
 }
-.promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(4) {
-    border-radius: 30% 18px 30% 18px;
+main.home .promo.site .row > div:nth-child(1), main.home .promo.site .row > div:nth-child(4) {
+    border-radius: 0 30% 0 30%;
 }
 
-/* Site Promo
-turn on for site promo border effect (keyword ***)
-.promo.site .row > div {
-    border-radius: 8px 10% 8px 10%;
-    border: 5px solid white;
+
+/* Item Promo */
+.promo.item .row > div {
+    border-radius: 0 30% 0 30%;
 }
-.promo.site .row > div:nth-child(2), .promo.site .row > div:nth-child(3) {
-    border-radius: 10% 8px 10% 8px;
+.promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(4) {
+    border-radius: 30% 0 30% 0;
 }
 
 
 /* Promo Colors */
-.promo .row > div:first-child {
+.promo .row > div:first-child, .promo .row > div:nth-child(4) {
     background: #596732;
     background: #f3fae1;
 }
-.promo .row > div:nth-child(2) {
-    background: #cc0052;
-}
-.promo .row > div:nth-child(3){
-    background: #cc0052;
-}
-.promo .row > div:nth-child(4){
-    background: #f3fae1;
+.promo .row > div:nth-child(2), .promo .row > div:nth-child(3){
+    background: #e23672;
+    background: #e6005c;
 }
 
+
+/* .promo text color inversion for darker background */
 .promo .row > div:first-child, .promo .row > div:first-child p, .promo .row > div:first-child h3, .promo .row > div:first-child .cta a,
 .promo .row > div:nth-child(4), .promo .row > div:nth-child(4) p, .promo .row > div:nth-child(4) h3, .promo .row > div:nth-child(4) .cta a
 {
@@ -589,6 +607,8 @@ turn on for site promo border effect (keyword ***)
     border-color: rgba(0,0,0,1);
     box-shadow: 0 0 20px 0 rgba(0,0,0, .3);
 }
+
+
 
 form {
 }
@@ -644,10 +664,22 @@ textarea.form-control, .form-control {
 
                                         /* Up to _MEDIUM  */
                                         @media only screen and (max-width : 992px) {
+                                            .promo h3 {
+                                                font-size: 2em;
+                                                line-height: 1;
+                                                margin-left: 10%;
+                                                margin-right: 10%;
+                                            }
+                                            .promo .row > div:first-child h3, .promo .row > div:last-child h3 {
+                                                font-size: 2.5em;
+                                            }
                                         }
 
+
+
+
                                         /* === _MOBILE and TABLETS ====== SMALL ================= */
-                                        @media only screen and (max-width : 768px) {
+                                        @media only screen and (max-width : 767px) {
 
 
                                             /* --- MOBILE and TABLETS --- */
@@ -714,13 +746,13 @@ textarea.form-control, .form-control {
                                             }
                                             .promo .row > div, .couple .row > div {
                                                 border-width: 5px;
-                                                border-radius: 8px;
+                                                border-radius: 0;
                                             }
                                             .promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(3) {
-                                                border-radius: 30% 8px 30% 8px;
+                                                border-radius: 30% 0 30% 0;
                                             }
                                             .promo.item .row > div:nth-child(4) {
-                                                border-radius: 8px 30% 8px 30%;
+                                                border-radius: 0 30% 0 30%;
                                             }
 
 
@@ -784,6 +816,16 @@ textarea.form-control, .form-control {
                                             }
                                             h1.brand a {
                                                 margin-bottom: .5em;
+                                            } 
+                                            /* Home Site Promo */
+                                            main.home .promo.site .row > div {
+                                                border-radius: 0 30% 0 30%;
+                                            }
+                                            main.home .promo.site .row > div:nth-child(2), main.home .promo.site .row > div:nth-child(4) {
+                                                border-radius: 30% 0 30% 0;
+                                            }
+                                            main.menu .promo.site .row > div:nth-child(3), main.menu .promo.site .row > div:nth-child(4) {
+                                                display: none;
                                             }
 
                                         }
@@ -797,7 +839,7 @@ textarea.form-control, .form-control {
 
                                         /* === MOBILE ONLY ============ XSMALL ================ */
                                         @media only screen and (max-width : 480px) {
-                                        }
+                                         }
 
                                         /* === Retina ========================================= */
                                         @media only screen and (max-width : 320px) {
@@ -833,7 +875,6 @@ textarea.form-control, .form-control {
                                             .promo .row > div:first-child .cta a:hover, .promo .row > div:nth-child(4) .cta a:hover {
                                                 border: 1px solid black;
                                             }
-
 
                                         }
 
@@ -930,8 +971,15 @@ textarea.form-control, .form-control {
 
 
     /* -----  mainList ------------ MEDIUM or larger ---  */
-    main.home .mainlist {
-        margin: 3em 15px;
+
+    .promo h3 {
+        font-size: 2.4em;
+        line-height: 1;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .promo .row > div:first-child h3, .promo .row > div:last-child h3 {
+        font-size: 3em;
     }
 
     .itemList {
@@ -967,20 +1015,39 @@ textarea.form-control, .form-control {
         width: 80%;
         max-height: 80%;
         margin: auto;
-        background: #f8f8f8;
+        background: #f3fae1;
         box-shadow:  0 0 0 2000px rgba(0,0,0,0.4);
         border-radius: 4px 4px 3px 3px;
         border: 1px solid #555;
     }
     .popup .header {
-        background: #2eb873;
-        padding: 0 2%;
+        background: #f3fae1;
+        background: #cc0052;
+        background: white;
+        padding: 1em 2%;
         cursor: pointer;
         border-radius: 3px 3px 0 0;
-    }
+        }
+        .popup h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+            color: #444;
+            text-transform: uppercase;
+        }
+        .popup h4 {
+            color: #444;
+        }
+        .popup h3 span {
+            float: right;
+            cursor: pointer;
+            font-size: 1.3em;
+            margin-top: -0.3em;
+            text-transform: none;
+        }
     .popup-content {
         overflow: auto;
-        background: white;
+        background: #fff;
         padding: 15px 2%;
         border-radius: 0 0 0 3px;
 
@@ -993,21 +1060,6 @@ textarea.form-control, .form-control {
     .popup p {
         font-size: 16px;
         margin-bottom: 10px;
-    }
-    .popup h3 {
-        padding: 0.75em 0;
-        margin: 0;
-        color: white;
-        font-size: 15px;
-        text-transform: uppercase;
-    }
-    .popup h3 span {
-        float: right;
-        cursor: pointer;
-        font-size: 1.3em;
-        margin-top: -0.3em;
-        text-transform: none;
-        font-weight: bold;
     }
     .popup.open {
         display: block;
@@ -1024,6 +1076,10 @@ textarea.form-control, .form-control {
                 }
                 .placard h2 {
                     font-size: 3em;
+                }
+                /* Site Promo  (keyword ***) */
+                main.menu .promo.site .row > div:first-child, main.menu .promo.site .row > div:nth-child(2) {
+                    border-radius: 70px 70px 0 0;
                 }
 
         }
@@ -1071,6 +1127,13 @@ textarea.form-control, .form-control {
             .itemList li.header h3 a {
                 min-height: 230px;
             }
+            /* Home Site Promo */
+            main.home .promo.site .row > div {
+                border-radius: 0 30% 0 30%;
+            }
+            main.home .promo.site .row > div:nth-child(2), main.home .promo.site .row > div:nth-child(4) {
+                border-radius: 30% 0 30% 0;
+            }
             /*  turn on for site promo border effect (keyword ***)
             .promo.site .row > div:nth-child(2), .promo.site .row > div:nth-child(4) {
                 border-radius: 8px 10% 8px 10%;
@@ -1079,6 +1142,8 @@ textarea.form-control, .form-control {
                 border-radius: 10% 8px 10% 8px;
             }
             */
+            /* Site Promo  (keyword ***) */
+
 
         }
 
