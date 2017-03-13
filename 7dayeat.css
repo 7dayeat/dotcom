@@ -311,15 +311,15 @@ h1.brand {
     background: #ff0066;
     background: #80b300;
     border: 3px solid #fff;
-    border-radius: 10% / 20%;
+    border-radius: 8% / 20%;
     font-size: 19px;
-
     float: left;
     text-align: center;
     overflow: hidden;
+    margin-left: -4px;
 }
     .brand a span {
-        padding: 13px 10px 11px;
+        padding: 15px 12px 13px;
         display: inline-block;
         font-weight: 600;
     }
@@ -346,9 +346,10 @@ h1.brand {
         border-color: #ff0066;
         border-color: #80b300;
         text-shadow: none;
+    margin-left: 0;
     }
     .brand a:hover span {
-        padding: 11px 10px 10px;
+        padding: 13px 10px 12px;
     }
     .brand a:hover:before {
         border-top: 4px solid #ff0066;
@@ -443,7 +444,6 @@ main.home .mainlist {
     background: rgba(255, 255, 255, 1);
     padding: .25em 15px .3em;
     margin: 0;
-    color: #80b300;
 }
 .itemList li.header h3 a:hover span {
     background: rgba(255, 255, 255, 0);

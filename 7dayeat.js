@@ -32,7 +32,7 @@
 
         // 7DayEat.com CONTENT
         $scope.siteInfo = {
-            name: '7dayEat.com'
+            name: '7DayEat.com'
         };
 
         // $scope.names = ["Emil", "Tobias", "Linus"];
