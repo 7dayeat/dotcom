@@ -1,9 +1,8 @@
-
- @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700|Maven+Pro:400,500,600,700|Work+Sans:200,400,700');
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700|PT+Sans:400,700|Maven+Pro:400,500,600,700|Work+Sans:200,400,700');
 
 
 body, button, input, optgroup, select, textarea {
-    font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
+    font-family: 'asap', Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
 section.couple h2, .promo h3 {
@@ -11,6 +10,7 @@ section.couple h2, .promo h3 {
     font-weight: 200;
 }
 h2, h3, h4, h6 {
+    font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
     font-weight: 400;
     margin: 0 0 0.5em;
 }
@@ -22,7 +22,8 @@ h1, .placard h2 span {
 
 /* _colors
 pink: #ff0066;
-light green: #e2ecc6; f3fae1
+light green: f3fae1
+dark green: 6f8a28
 */
 
 
@@ -32,10 +33,10 @@ light green: #e2ecc6; f3fae1
     font-weight: 200;
     padding-left: 4px;
 }
-strong, .keywords a, .a, h3, .filter h2, span.a, .priceRange {
+strong, .keywords a, .a, span.a, .priceRange, .filter h2 {
     font-weight: 500;
 }
-.keywords a.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
+.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
     font-weight: 600;
 }
 
@@ -56,14 +57,14 @@ body {
     font-smooth: never;
     */
     color: #999;
-    background: White;
+    background: #f8f8f8;
     font-size: 1.1rem;
 }
 header {
 }
 /*-- _LINKS ---------------------------------------------------- */
 
-a, a:focus, header nav a:hover, .promo h2 a:hover, .promo h4 a:hover, .promo p a:hover, .couple h2 a:hover {
+a, a:focus, header nav a:hover, .promo h2 a:hover, .promo h4 a:hover, .promo p a:hover, .couple h2 a:hover, .keywords a:hover {
     text-decoration: none;
 }
 footer a, .promo h2 a, .promo h4 a, .promo p a {
@@ -94,8 +95,8 @@ a:hover, .a:hover {
 }
 .keywords h2, .keywords a {
     color: black;
-    color: #303913;
 }
+
 /*-- _HEADINGS and COPY -------------------------------------------- */
 
 h2, h3 {
@@ -259,14 +260,13 @@ header nav {
     padding-top: 1em;
     padding-bottom: 1em;
     line-height: 1;
-    position: fixed;
-    z-index: 1;
+    background: white;
 }
 header nav li.navItem {
     margin-top: 0.25em;
 }
 header nav li a {
-    padding: .25em .5em;
+    padding: .25em 1em .25em 0;
     letter-spacing: -1px;
     border-radius: 3px;
 }
@@ -274,18 +274,17 @@ header nav li a {
 /* === _footer === */
 
 footer {
-    margin-top: 3em;
+    background: #f0f0f0;
     font-size: 0.8em;
+    border-top: 1px solid #ddd;
 }
 footer .copyright {
-    padding-top: 0.5em;
-    padding-bottom: 1em;
-    border-top: 1px solid #ccc;
     font-size: 0.7em;
     font-size: 12px;
+    padding: 1em 0;
 }
 footer a, footer p, footer div {
-    color: #aaa;
+    color: #888;
 }
 footer .copyright div:last-child {
     cursor: pointer;
@@ -307,7 +306,7 @@ h1.brand {
     padding: 0;
     background: #ff0066;
     border: 3px solid #fff;
-    border-radius: 7% / 27%;
+    border-radius: 10% / 20%;
     font-size: 19px;
 
     float: left;
@@ -319,7 +318,7 @@ h1.brand {
         display: inline-block;
     }
     .brand a:before, .brand a:after {
-        border: 50px solid transparent;
+        border: 40px solid transparent;
         margin: 0 15px;
         border-radius: 10px;
         display: block;
@@ -327,11 +326,11 @@ h1.brand {
         height: 0;
     }
     .brand a:before {
-        border-top: 2px solid #fff;
+        border-top: 3px solid #fff;
         border-bottom: 0;
     }
     .brand a:after {
-        border-bottom: 2px solid #fff;
+        border-bottom: 3px solid #fff;
         border-top: 0;
     }
     .brand a:hover {
@@ -344,10 +343,10 @@ h1.brand {
         padding: 12px 10px 10px;
     }
     .brand a:hover:before {
-        border-top: 3px solid #ff0066;
+        border-top: 4px solid #ff0066;
     }
     .brand a:hover:after {
-        border-bottom: 3px solid #ff0066;
+        border-bottom: 4px solid #ff0066;
     }
 
 /* --------------  filter ---------------  */
@@ -382,6 +381,7 @@ h1.brand {
     background: #e23672;
     background: #ff0066;
     background: #e6005c;
+    background:  #6f8a28;
 }
 .filter .search label {
     display: block;
@@ -395,7 +395,7 @@ h1.brand {
 
 /* --------------  mainList ---------------  */
 main.home .mainlist {
-    margin: 2em 15px;
+    margin: 2em 15px 1.75em;
 }
 .itemList li.header h3 {
     margin: 0 0 0.125em 0;
@@ -403,7 +403,7 @@ main.home .mainlist {
 .itemList li.header h3 a {
     min-height: 170px;
     line-height: 1;
-    font-size: 0.9em;
+    font-size: 0.8em;
     display: block;
     background-size: 225%;
     background-position: center;
@@ -441,8 +441,9 @@ main.home .mainlist {
 
 }
 main.home .itemList.flat {
-    padding: 0 15px;
-    margin-bottom: 2em;
+    padding: 0 15px .5em;
+    overflow: auto;
+    background: white
 }
 .itemList p {
     text-align: right;
@@ -478,12 +479,12 @@ main.menu .itemList .hoverbox {
     margin-top: 1em;
 }
 main.menu .itemList .priceRange {
-    float: right;
+    text-align: right;
     margin: 1em 0 0 1em;
 }
 
 /* --- .HOVERBOX WIDTH ITEMLIST HOURS ---------- */
-.itemList .hoverbox.hours .overflow {
+.itemList .hoverbox .overflow {
     width: 15em;
 }
 .itemList .hoverbox.hours .overflow p {
@@ -499,7 +500,6 @@ main.menu .itemList .priceRange {
 
 /* --- .HOVERBOX ITEMLIST ADDRESS ---------- */
 .itemList .hoverbox.address .overflow {
-    width: 15em;
     text-align: left;
 }
 .itemList .hoverbox.address .overflow p {
@@ -532,6 +532,7 @@ main.menu .itemList .priceRange {
 /* --------------  _promo ---------------  */
 .promo {
     color: rgba(255,255,255,0.95);
+    background: white;
 }
 .promo .gutter {
     padding: 1.25em 0 1em;
@@ -539,45 +540,41 @@ main.menu .itemList .priceRange {
 .promo.site .gutter {
     padding: 1.25em 5% 1em;
 }
-.promo .row, .couple .row {
+.promo .row {
     padding-right: 20px;
     padding-left: 20px;
 }
-.promo .row > div, .couple .row > div {
+.promo .row > div {
     border: 10px solid white;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Couple Promo */
-.couple {
-    margin: 20px 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.couple .row > div {
-    background: #F8F8F8;
-}
-.couple .gutter {
-    padding: 2em;
-    border-radius: 3px;
-}
 
 /* Home Site Promo */
+main.home .promo.site {
+    padding-top: 2em;
+}
+.promo.site {
+    padding-bottom: 2em;
+}
 main.home .promo.site .row > div {
-    border-radius: 30% 0 30% 0;
+    border-radius: 100px 0 100px 0;
 }
 main.home .promo.site .row > div:nth-child(1), main.home .promo.site .row > div:nth-child(4) {
-    border-radius: 0 30% 0 30%;
+    border-radius: 0 100px 0 100px;
 }
 
 
 /* Item Promo */
+.promo.item {
+    padding-top: 2em;
+}
 .promo.item .row > div {
-    border-radius: 0 30% 0 30%;
+    border-radius: 0 80px 0 80px;
 }
 .promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(4) {
-    border-radius: 30% 0 30% 0;
+    border-radius: 80px 0 80px 0;
 }
 
 
@@ -589,20 +586,25 @@ main.home .promo.site .row > div:nth-child(1), main.home .promo.site .row > div:
 .promo .row > div:nth-child(2), .promo .row > div:nth-child(3){
     background: #e23672;
     background: #e6005c;
+    background: #6f8a28;
+}
+main.menu .promo.site .row > div:nth-child(2) {
+    background: #f3fae1;
 }
 
 
 /* .promo text color inversion for darker background */
 .promo .row > div:first-child, .promo .row > div:first-child p, .promo .row > div:first-child h3, .promo .row > div:first-child .cta a,
+main.menu .promo.site .row > div:nth-child(2), main.menu .promo.site .row > div:nth-child(2) p, main.menu .promo.site .row > div:nth-child(2) h3, main.menu .promo.site .row > div:nth-child(2) .cta a,
 .promo .row > div:nth-child(4), .promo .row > div:nth-child(4) p, .promo .row > div:nth-child(4) h3, .promo .row > div:nth-child(4) .cta a
 {
     color: black;
 }
-.promo .row > div:first-child .cta a, .promo .row > div:nth-child(4) .cta a
+.promo .row > div:first-child .cta a, .promo .row > div:nth-child(4) .cta a, main.menu .promo.site .row > div:nth-child(2) .cta a
 {
     border-color: rgba(0,0,0,0.2);
 }
-.promo .row > div:first-child .cta a:hover, .promo .row > div:nth-child(4) .cta a:hover
+.promo .row > div:first-child .cta a:hover, .promo .row > div:nth-child(4) .cta a:hover, main.menu .promo.site .row > div:nth-child(2) .cta a:hover
 {
     border-color: rgba(0,0,0,1);
     box-shadow: 0 0 20px 0 rgba(0,0,0, .3);
@@ -681,26 +683,6 @@ textarea.form-control, .form-control {
                                         /* === _MOBILE and TABLETS ====== SMALL ================= */
                                         @media only screen and (max-width : 767px) {
 
-
-                                            /* --- MOBILE and TABLETS --- */
-                                            /*
-                                            mobilehide {
-                                                display: none;
-                                                margin: 0;
-                                                padding: 0;
-                                                height: 0;
-                                                border: 0;
-                                                overflow: hidden;
-                                            }
-                                             section div[class*='col-'] img {
-                                                display: none;
-                                                margin: 0;
-                                                padding: 0;
-                                             }
-                                            */
-
-                                            body {
-                                            }
                                             h3 {
                                                 font-size: 1.4em;
                                             }
@@ -721,9 +703,19 @@ textarea.form-control, .form-control {
                                                 padding: 0 !important;
                                                 margin: 0 !important;
                                             }
+
+                                            main.home .mainlist {
+                                                margin-left: 0;
+                                                margin-right: 0;
+                                            }
+
+
+
+
                                             footer {
                                                 background: #f8f8f8;
-                                                }
+                                                border-top: 3em solid white;
+                                            }
                                             footer .d-flex {
                                                 display: block !important;
                                                 text-align: center;
@@ -749,13 +741,11 @@ textarea.form-control, .form-control {
                                                 border-radius: 0;
                                             }
                                             .promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(3) {
-                                                border-radius: 30% 0 30% 0;
+                                                border-radius: 80px 0 80px 0;
                                             }
                                             .promo.item .row > div:nth-child(4) {
-                                                border-radius: 0 30% 0 30%;
+                                                border-radius: 0 80px 0 80px;
                                             }
-
-
                                         }
 
 
@@ -766,6 +756,13 @@ textarea.form-control, .form-control {
 
                                         /* === col-xs-6 braking point ======================================== */
                                         @media only screen and (max-width : 575px) {
+
+                                            nav > ul > li {
+                                                clear: left;
+                                            }
+                                            nav li a {
+                                                word-spacing: 2px;
+                                            }
 
                                             /* _placard and _banner --------------------- */
 
@@ -784,11 +781,11 @@ textarea.form-control, .form-control {
                                             .placard h2 {
                                                 color: Black;
                                                 text-shadow: none;
-                                                font-weight: 600;
+                                                font-weight: 500;
+                                                line-height: 1;
                                             }
                                             .placard h2 span {
-                                                font-weight: 600;
-                                                margin-bottom: -.25em;
+                                                font-weight: 500;
                                             }
                                             .menu .banner {
                                                 background-size: auto 100%;
@@ -797,37 +794,24 @@ textarea.form-control, .form-control {
                                                 padding-top: 10em;
                                                 padding-bottom: 0;
                                             }
-
-                                            /*
-                                            div[class*='col-'] {
-                                                width: auto;
-                                                float: none;
-                                            }
-                                            */
                                             .promo ul {
                                                 text-align: left;
                                                 margin: 0 10%;
                                             }
-                                            header nav li {
-                                                clear: left;
-                                            }
-                                            header nav li a {
-                                                word-spacing: 2px;
-                                            }
                                             h1.brand a {
                                                 margin-bottom: .5em;
-                                            } 
+                                                margin-left: -3px;
+                                            }
                                             /* Home Site Promo */
                                             main.home .promo.site .row > div {
-                                                border-radius: 0 30% 0 30%;
+                                                border-radius: 0 100px 0 100px;
                                             }
                                             main.home .promo.site .row > div:nth-child(2), main.home .promo.site .row > div:nth-child(4) {
-                                                border-radius: 30% 0 30% 0;
+                                                border-radius: 100px 0 100px 0;
                                             }
                                             main.menu .promo.site .row > div:nth-child(3), main.menu .promo.site .row > div:nth-child(4) {
                                                 display: none;
                                             }
-
                                         }
 
 
@@ -849,7 +833,11 @@ textarea.form-control, .form-control {
                                             .row {
                                                 display: block !important;
                                             }
-                                            body {
+                                            header nav li.navItem {
+                                                margin-top: 0.5em;
+                                            }
+                                            h1.brand a {
+                                                margin-bottom: 0.75em;
                                             }
                                             .text-center {
                                                 text-align: left;
@@ -875,7 +863,10 @@ textarea.form-control, .form-control {
                                             .promo .row > div:first-child .cta a:hover, .promo .row > div:nth-child(4) .cta a:hover {
                                                 border: 1px solid black;
                                             }
-
+                                            .itemList .hoverbox .overflow {
+                                                width: 12em;
+                                                font-size: 0.8em
+                                            }
                                         }
 
 
@@ -920,7 +911,7 @@ textarea.form-control, .form-control {
 
     /* --- VERTICAL GUTTER --------------------- COLUMN --- */
 
-    .row > div[class*='col-'], .row > ng-include > div[class*='col-'], .row > nav[class*='col-'], .row > aside[class*='col-'] {
+    .row > div[class*='col-'], .row > ng-include > div[class*='col-'], .row > nav[class*='col-'] {
         padding-top: 1em;
         padding-bottom: 1em;
     }
@@ -988,6 +979,10 @@ textarea.form-control, .form-control {
     section.menu.couple {
         margin-bottom: 3em;
     }
+    /* Site Promo  (keyword ***) */
+    main.menu .promo.site .row > div:first-child, main.menu .promo.site .row > div:nth-child(2) {
+        border-radius: 80px 80px 0 0;
+    }
 
     /* --- UL or DIV is being used --- --- */
     .half-width {
@@ -1015,7 +1010,7 @@ textarea.form-control, .form-control {
         width: 80%;
         max-height: 80%;
         margin: auto;
-        background: #f3fae1;
+        background: #fafafa;
         box-shadow:  0 0 0 2000px rgba(0,0,0,0.4);
         border-radius: 4px 4px 3px 3px;
         border: 1px solid #555;
@@ -1024,6 +1019,7 @@ textarea.form-control, .form-control {
         background: #f3fae1;
         background: #cc0052;
         background: white;
+        background: #f3fae1;
         padding: 1em 2%;
         cursor: pointer;
         border-radius: 3px 3px 0 0;
@@ -1070,17 +1066,13 @@ textarea.form-control, .form-control {
 
         /* MEDIUM to LARGE */
         @media only screen and (min-width: 769px) and (max-width : 1199px) {
-                .keywpords a {
-                    font-size: 0.9em;
-                    line-height: 0.75;
-                }
-                .placard h2 {
-                    font-size: 3em;
-                }
-                /* Site Promo  (keyword ***) */
-                main.menu .promo.site .row > div:first-child, main.menu .promo.site .row > div:nth-child(2) {
-                    border-radius: 70px 70px 0 0;
-                }
+            .keywpords a {
+                font-size: 0.9em;
+                line-height: 0.75;
+            }
+            .placard h2 {
+                font-size: 3em;
+            }
 
         }
 
@@ -1127,24 +1119,6 @@ textarea.form-control, .form-control {
             .itemList li.header h3 a {
                 min-height: 230px;
             }
-            /* Home Site Promo */
-            main.home .promo.site .row > div {
-                border-radius: 0 30% 0 30%;
-            }
-            main.home .promo.site .row > div:nth-child(2), main.home .promo.site .row > div:nth-child(4) {
-                border-radius: 30% 0 30% 0;
-            }
-            /*  turn on for site promo border effect (keyword ***)
-            .promo.site .row > div:nth-child(2), .promo.site .row > div:nth-child(4) {
-                border-radius: 8px 10% 8px 10%;
-            }
-            .promo.site .row > div:nth-child(1) {
-                border-radius: 10% 8px 10% 8px;
-            }
-            */
-            /* Site Promo  (keyword ***) */
-
-
         }
 
 
@@ -1152,12 +1126,6 @@ textarea.form-control, .form-control {
 
 /*
 
-
-
-    Rules
-    Computed
-    Animations
-    Fonts
 
 element {
 
