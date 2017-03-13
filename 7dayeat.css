@@ -266,7 +266,7 @@ header nav {
     background: white;
 }
 header nav li.navItem {
-    margin-top: 0.25em;
+    margin-top: 0.5em;
 }
 header nav li a {
     padding: .25em 1em .25em 0;
@@ -346,7 +346,7 @@ h1.brand {
         border-color: #ff0066;
         border-color: #80b300;
         text-shadow: none;
-    margin-left: 0;
+        margin-left: 0;
     }
     .brand a:hover span {
         padding: 13px 10px 12px;
@@ -475,6 +475,8 @@ main.home .itemList.flat {
     box-shadow: 0 0 40px -5px rgba(0,0,0,0.5);
     z-index: 1;
     left: 0;
+    font-size: 0.85em;
+    line-height: 1.3;
     bottom: 1.5em;
     padding: .5em 1em;
 }
@@ -495,25 +497,28 @@ main.menu .itemList .priceRange {
     margin: 1em 0 0 1em;
 }
 
-/* --- .HOVERBOX WIDTH ITEMLIST HOURS ---------- */
+/* --- .HOVERBOX OVERFLOW ---------- */
 .itemList .hoverbox .overflow {
     width: 15em;
 }
 
 /* --- .HOVERBOX P ---------- */
 .itemList .hoverbox .overflow p {
-    line-height: 1.3;
-    padding: 0.125em;
-    font-size: 0.9em;
+    padding: .1em .2em;
 }
 .sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
     font-weight: 700;
+    color: #555;
+}
+
+.itemList .hoverbox.address .overflow {
+    padding: 1em 2em;
 }
 .itemList .hoverbox.address .overflow p {
     text-align: left;
 }
 .overflow p.odd {
-    background: rgba(0,0,0, 0.02);
+    background: rgba(0,0,0, 0.045);
     border-top: 1px solid rgba(0,0,0, 0.008);
     border-bottom: 1px solid rgba(0,0,0, 0.008);
 }
@@ -772,6 +777,10 @@ textarea.form-control, .form-control {
                                                 word-spacing: 2px;
                                             }
 
+                                            .itemList .hoverbox .overflow {
+                                                width: 12em;
+                                                font-size: 0.8em
+                                            }
                                             /* _placard and _banner --------------------- */
 
                                             .banner > .row .placard:first-child {
@@ -870,10 +879,6 @@ textarea.form-control, .form-control {
                                             .promo .row > div:first-child .cta a, .promo .row > div:nth-child(4) .cta a,
                                             .promo .row > div:first-child .cta a:hover, .promo .row > div:nth-child(4) .cta a:hover {
                                                 border: 1px solid black;
-                                            }
-                                            .itemList .hoverbox .overflow {
-                                                width: 12em;
-                                                font-size: 0.8em
                                             }
                                         }
 
